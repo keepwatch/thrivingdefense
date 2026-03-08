@@ -5,7 +5,7 @@ title: ATT&CK Procedures and Instances
 description: Exploring the differences between MITRE ATT&CK 'instances' and On Detection 'procedures' for detection engineering.
 aliases:
 created: 2026-03-07
-author: "[[content/people/Jordan Anderson|Jordan Anderson]]"
+author: "[[people/Jordan Anderson|Jordan Anderson]]"
 ---
 # ATT&CK Procedures and Instances
 
@@ -21,7 +21,7 @@ The definition above sources from the [ATT&CK FAQ](https://attack.mitre.org/reso
 
 ## On Detection definition
 
-[[content/people/Jared Atkinson|Jared Atkinson]] wrote a [series of articles](https://specterops.io/blog/2023/11/14/part-11-functional-composition/) describing a comprehensive taxonomy for understanding attacker activity (beyond what MITRE defined with Tactics and Techniques). I highly recommend the entire series, but this is the key quote from [part 6](https://specterops.io/blog/2022/09/08/part-6-what-is-a-procedure/):
+[[people/Jared Atkinson|Jared Atkinson]] wrote a [series of articles](https://specterops.io/blog/2023/11/14/part-11-functional-composition/) describing a comprehensive taxonomy for understanding attacker activity (beyond what MITRE defined with Tactics and Techniques). I highly recommend the entire series, but this is the key quote from [part 6](https://specterops.io/blog/2022/09/08/part-6-what-is-a-procedure/):
 
 > ... one of the significant issues in the sub-discipline of Detection and Response is that our map is too low resolution to use to make sound and accurate predictions ... we apprehend the cyber world as something composed of three layers \[but there are\] at least six layers (functions, operations, procedures, sub-techniques, techniques, and tactics)
 
@@ -34,7 +34,7 @@ This is necessary because, as Jared points out in [part 1](https://specterops.io
 Jared goes on to further define operations and functions, but for our purpose, it's important to note that these two definitions of procedure are incompatible. In this latter definition, creating a logical relationship of technique to procedures allows researchers to define the boundaries of an attack via the [[Technique Research Report (TRR)]] and similar tools.
 ## Procedure vs Instance
 
-[[content/people/Andrew VanVleet|Andrew VanVleet]] recently wrote a blog post ([TTPI’s: Extending the Classic Model](https://medium.com/@vanvleet/ttpis-extending-the-classic-model-058c572b76f3)) that explains MITRE ATT&CK is not recording procedures, but rather *instances* (or perhaps *observables*). Using the more precise term benefits detection engineers who are working to define coverage.
+[[people/Andrew VanVleet|Andrew VanVleet]] recently wrote a blog post ([TTPI’s: Extending the Classic Model](https://medium.com/@vanvleet/ttpis-extending-the-classic-model-058c572b76f3)) that explains MITRE ATT&CK is not recording procedures, but rather *instances* (or perhaps *observables*). Using the more precise term benefits detection engineers who are working to define coverage.
 
 Remember:
 - Procedures can be comprehensively enumerated, tested, and detected

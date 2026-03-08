@@ -4,7 +4,7 @@ title: detections based on threat intelligence are always opportunistic
 description: Why threat intelligence can only provide an opportunistic, not comprehensive, understanding of attack methods.
 aliases:
 created: 2026-03-07, 09:49
-author: "[[content/people/Jordan Anderson|Jordan Anderson]]"
+author: "[[people/Jordan Anderson|Jordan Anderson]]"
 ---
 # detections based on threat intelligence are always opportunistic
 

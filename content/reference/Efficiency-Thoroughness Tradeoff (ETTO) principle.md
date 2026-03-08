@@ -5,7 +5,7 @@ title: Efficiency-Thoroughness Tradeoff (ETTO) principle
 description: Understanding the tradeoff between efficiency and thoroughness, and why maximizing efficiency wastes resources.
 aliases:
 created: 2026-03-07, 10:37
-author: "[[content/people/Jordan Anderson|Jordan Anderson]]"
+author: "[[people/Jordan Anderson|Jordan Anderson]]"
 ---
 # Efficiency-Thoroughness Tradeoff (ETTO) principle
 

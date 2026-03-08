@@ -4,7 +4,7 @@ title: Acquire rules for yielded techniques at scale
 description: Why yielded techniques are impractical to detect manually and should instead be outsourced to collaboratively developed sources.
 aliases:
 created: 2026-03-07, 10:28
-author: "[[content/people/Jordan Anderson|Jordan Anderson]]"
+author: "[[people/Jordan Anderson|Jordan Anderson]]"
 ---
 # Acquire rules for yielded techniques at scale
 Building off [[some techniques should only be detected opportunistically]] and the principles of *yielded techniques* established there, some techniques are impractical to detect organization-by-organization. Instead, they should be outsourced to vendors (EDR, A/V, email security appliances, etc.) or shared detection sources and implemented with minimal human effort. 

@@ -4,7 +4,7 @@ title: Accept more false negatives for yielded techniques
 description: Why yielded techniques should be tuned more aggressively and are safer to detect opportunistically.
 aliases:
 created: 2026-03-07
-author: "[[content/people/Jordan Anderson|Jordan Anderson]]"
+author: "[[people/Jordan Anderson|Jordan Anderson]]"
 ---
 # Accept more false negatives for yielded techniques
 

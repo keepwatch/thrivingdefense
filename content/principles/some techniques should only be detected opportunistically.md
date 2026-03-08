@@ -4,7 +4,7 @@ title: some techniques should only be detected opportunistically
 description: Why some broad techniques cannot be detected comprehensively and must be treated as yielded techniques.
 aliases:
 created: 2026-03-07
-author: "[[content/people/Jordan Anderson|Jordan Anderson]]"
+author: "[[people/Jordan Anderson|Jordan Anderson]]"
 ---
 # some techniques should only be detected opportunistically
 
@@ -12,7 +12,7 @@ Frequently, detection engineers are held to a standard of coverage based on the 
 
 The challenge emerges because Powershell, a powerful Windows-embedded scripting language, can facilitate a vast and likely uncountable number of useful, interesting, or malicious purposes. Many other techniques share the same challenge. Interestingly, some ATT&CK techniques (like `T1003.006 - DCSync`) are narrowly scoped and [thoroughly researched via TRR](https://github.com/tired-labs/techniques/blob/main/reports/trr0011/ad/README.md) to identify all possible [[ATT&CK Procedures and Instances|procedures]] (technique execution paths). DCSync can be *comprehensively* detected, where the best option for Powershell is *opportunistic* detection that captures known suspicious [[ATT&CK Procedures and Instances#Procedure vs Instance|instances]].
 
-Because opportunistic is a term overloaded in cybersecurity (such as *opportunistic* vs *targeted* attacks), it's better to refer to these techniques as *yielded techniques*. This builds on the term *yielded space* coined by [[content/people/Andrew VanVleet|Andrew VanVleet]], referring to attacks that are impractical (for whatever reason) to detect in a given organization. Intentionally yielding space allows the defender to conduct the battle on [[Selecting Advantageous Terrain|advantageous terrain]] instead of defending what is indefensible. More practically for the detection organization, this permits resource conservation: gaining *efficiency* by reducing time spent on detection development, research, tuning, and alert review for yielded techniques, allowing more *thoroughness* for detection research and alert review tasks (see the [[Efficiency-Thoroughness Tradeoff (ETTO) principle|ETTO principle]]). 
+Because opportunistic is a term overloaded in cybersecurity (such as *opportunistic* vs *targeted* attacks), it's better to refer to these techniques as *yielded techniques*. This builds on the term *yielded space* coined by [[people/Andrew VanVleet|Andrew VanVleet]], referring to attacks that are impractical (for whatever reason) to detect in a given organization. Intentionally yielding space allows the defender to conduct the battle on [[Selecting Advantageous Terrain|advantageous terrain]] instead of defending what is indefensible. More practically for the detection organization, this permits resource conservation: gaining *efficiency* by reducing time spent on detection development, research, tuning, and alert review for yielded techniques, allowing more *thoroughness* for detection research and alert review tasks (see the [[Efficiency-Thoroughness Tradeoff (ETTO) principle|ETTO principle]]). 
 
 What principles can we infer from this?
 

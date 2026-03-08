@@ -5,7 +5,7 @@ title: Trusted Service Infrastructure (TSI)
 description: An overview of the risks inherent to powerful administrative applications, including examples of technologies.
 aliases:
 created: 2026-03-07, 08:59
-author: "[[content/people/Jordan Anderson|Jordan Anderson]]"
+author: "[[people/Jordan Anderson|Jordan Anderson]]"
 ---
 # Trusted Service Infrastructure (TSI)
 Mandiant/Google started using this term in 2024 to refer to "management interfaces for platforms and technologies that provide core services for an organization". This definition was added in passing to the blog post [Defending Against UNC3944: Cybercrime Hardening Guidance from the Frontlines | Google Cloud Blog](https://cloud.google.com/blog/topics/threat-intelligence/unc3944-proactive-hardening-recommendations), because UNC3944 and its ilk focused on conducting malicious operations with minimal malware use. Through stealing credentials via access brokers or social engineering, threat actors would search information repositories for secrets and eventually gain access to powerful tools (in [this case](https://cloud.google.com/blog/topics/threat-intelligence/unc3944-targets-saas-applications), the threat actor even gained access to an EDR and used it to run commands on target systems via real-time response!).

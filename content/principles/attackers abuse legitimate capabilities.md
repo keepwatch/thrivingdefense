@@ -5,7 +5,7 @@ aliases:
 created: 2026-03-07
 tags:
   - type/stub
-author: "[[content/people/Jordan Anderson|Jordan Anderson]]"
+author: "[[people/Jordan Anderson|Jordan Anderson]]"
 ---
 # attackers abuse legitimate capabilities
 One of the reasons detection is challenging is that nearly every action we seek to *detect* has a legitimate purpose. For example, in [Kerberoasting](https://attack.mitre.org/techniques/T1558/003/), requesting a ticket is a normal part of the Kerberos workflow and therefore difficult to detect consistently. Practically, this takes an opportunistic thresholding approach (X requests in Y time) rather than a comprehensive one - see this [Sigma example](https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_kerberoasting_activity.yml#L7). 
@@ -17,4 +17,4 @@ There are some defensive categories that are less frequently used for legitimate
 
 One final point: remember that any activity likely to be malicious can also be *prevented* and is less important to detect. Therefore, many detection rules are focusing on the harder cases that are difficult to distinguish from normal (non-malicious) activity.
 
-Credit to [[content/people/Michael H|Michael]] for the original idea.
+Credit to [[people/Michael H|Michael]] for the original idea.
