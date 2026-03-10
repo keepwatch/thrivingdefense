@@ -11,9 +11,9 @@ author: "[[people/Jordan Anderson|Jordan Anderson]]"
 First, a definition of terms:
 
 |       | Positive                                                 | Negative                                                             |
-| ----- | -------------------------------------------------------- | -------------------------------------------------------------------- |
-| True  | Signal fires and the target condition exists             | Signal **does not** fire and the target condition **does not** exist |
-| False | Signal fires and the target condition **does not** exist | Signal **does not** fire and the target condition exists             |
+| ----- | :------------------------------------------------------- | :------------------------------------------------------------------- |
+| True  | Signal fires and the target condition exists             | Signal ==does not== fire and the target condition ==does not== exist |
+| False | Signal fires and the target condition ==does not== exist | Signal ==does not== fire and the target condition exists             |
 The framings most often used in cybersecurity are True Positive, False Positive, and False Negative. For both Positive conditions, an alert fires; alert noise is attributed (sometimes unfairly) to False Positives, and False Negatives occur when an alert/signal should have fired but did not - malicious activity occurred that was missed.
 
 > Generally, reducing False Positives means tuning the rule to be more specific, which runs the risk of overfitting and permitting False Negatives.
