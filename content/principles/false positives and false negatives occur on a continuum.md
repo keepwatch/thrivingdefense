@@ -6,8 +6,6 @@ aliases:
 created: 2026-03-07, 10:26
 author: "[[people/Jordan Anderson|Jordan Anderson]]"
 ---
-# false positives and false negatives occur on a continuum
-
 First, a definition of terms:
 
 |       | Positive                                                 | Negative                                                             |

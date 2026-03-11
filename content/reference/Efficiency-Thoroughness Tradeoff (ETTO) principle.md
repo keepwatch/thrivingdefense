@@ -7,8 +7,6 @@ aliases:
 created: 2026-03-07, 10:37
 author: "[[people/Jordan Anderson|Jordan Anderson]]"
 ---
-# Efficiency-Thoroughness Tradeoff (ETTO) principle
-
 Per [Wikipedia](https://en.wikipedia.org/wiki/Efficiency%E2%80%93thoroughness_trade-off_principle):
 > there is a trade-off between efficiency or effectiveness on one hand, and thoroughness ... on the other
 

@@ -6,8 +6,6 @@ aliases:
 created: 2026-03-07, 09:49
 author: "[[people/Jordan Anderson|Jordan Anderson]]"
 ---
-# detections based on threat intelligence are always opportunistic
-
 This can be expanded more, but said very simply:
 
 - Attackers only exercise some of the likely possible attack paths

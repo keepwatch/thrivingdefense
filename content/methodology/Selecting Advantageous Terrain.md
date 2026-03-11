@@ -7,8 +7,6 @@ tags:
   - type/article
 aliases:
 ---
-# Selecting Advantageous Terrain
-
 > "He who defends everything, defends nothing" - Attributed to Frederick the Great
 
 Cybersecurity defenders face scarcity every day. There are a vast number of attacks possible, detections that need to be written or maintained, new technologies to be integrated, and a vast quantity of alerts to review or tune. It can seem impossible to get ahead of the daily operational constraints of human time, data ingest costs, or alert volume incurred by the SOC. Therefore, defenders must concentrate resources on the paths likely to provide the most return on time investment.
