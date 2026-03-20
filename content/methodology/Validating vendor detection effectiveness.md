@@ -28,7 +28,7 @@ Validation tests based off deep technique research are the best way to know what
 
 ### Repeated vendor validation
 
-If custom [[detection libraries must be repeatedly validated]], ==vendor== libraries deserve even more scrutiny. After all, a vendor could remove or break a detection that was a lynchpin of your coverage strategy at any point — and never tell you. Only repeated testing of vendor coverage will catch that gap before a breach does.
+If custom [[detection libraries must be repeatedly validated]], vendor libraries deserve even more scrutiny. After all, a vendor could remove or break a detection that was a lynchpin of your coverage strategy at any point — and never tell you. Only repeated testing of vendor coverage will catch that gap before a breach does.
 
 ## Conclusion
 
@@ -38,5 +38,4 @@ If custom [[detection libraries must be repeatedly validated]], ==vendor== libra
 	- P.S. - [first time ART contributors get a free T-shirt!](https://github.com/redcanaryco/atomic-red-team/wiki/Contributing#claim-your-free-t-shirt)
 - Plan and execute [[detection libraries must be repeatedly validated|recurring validation]] of your initial findings
 
-## Footnotes
 [^1]: Splunk, Elastic, and Palo Alto are notable exceptions.
