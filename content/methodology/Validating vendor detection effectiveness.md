@@ -7,12 +7,12 @@ aliases:
 created: 2026-03-19,
 draft: false
 ---
-We've discussed [[Where detections come from#Vendor rules|elsewhere]] that one key method of acquiring detection rules is by buying them. But it's so difficult to assess how much coverage or effectiveness a vendor product offers. Usually, vendors do not release the full list of rules they run against your environment[^1], with protestations that it would give away trade secrets and allow attackers to evade carefully crafted defenses. Instead, they produce too-good-to-be-true **100% MITRE ATT&CK® COVERAGE** claims, humblebrag about their vast visibility into cross-customer data, and write blog posts about the hot new threats their threat intel team found last week. 
+We've discussed [[Where detections come from#Vendor rules|elsewhere]] that one key method of acquiring detection rules is by buying them. But it's incredibly difficult to assess how much coverage or effectiveness a vendor product actually offers. Usually, vendors don't release the full list of rules they run against your environment[^1] — citing trade secrets and the risk of tipping off attackers. Instead, they produce too-good-to-be-true **100% MITRE ATT&CK® COVERAGE** claims, humblebrag about their vast visibility into cross-customer data, and write blog posts about the hot new threats their threat intel team found last week.
 
 But how do we **know**? How can we decide whether we can trust the vendor to detect that specific attack? 
 ## Approaches
 
-- ==Always trust the vendor==. Believe they have full coverage until an incident (or safer yet, a red team assessment) identifies the gaps. At that point, you can either work with the vendor to add new rules (or add them yourself). **Problem**: an assessment or attack will show one attack path, not all possible attack paths, so there must be a more comprehensive approach.
+- ==Always trust the vendor==. Believe they have full coverage until an incident (or red team assessment) identifies the gaps. At that point, you can either work with the vendor to add new rules (or add them yourself). **Problem**: an assessment or attack will show one attack path, not all possible attack paths, so there must be a more comprehensive approach.
 - ==Never trust the vendor==. Build all detections that your team needs to have and treat the vendor detections as "nice-to-have". **Problem**: this produces duplicative effort and increases long-term technology and detection maintenance costs.
 - ==Build detections where the vendor has gaps==. This could be organization-specific rules, cases where you know the vendor doesn't have coverage for one reason or another, etc. **Problem**: vendors are often wary to give up their "secret sauce" detections - they may provide detection name, but not logic; and even if they provide logic, deduplicating coverage from one rule to another is very hard to do (correctly). 
 
@@ -28,7 +28,7 @@ Validation tests based off deep technique research are the best way to know what
 
 ### Repeated vendor validation
 
-As custom [[detection libraries must be repeatedly validated]], how much more so should ==vendor== libraries? After all, at any point, a vendor could remove or break a detection that was a lynchpin of your detection coverage strategy and never notify you. Only repeated testing of vendor coverage will identify that future gap before a breach does.
+If custom [[detection libraries must be repeatedly validated]], ==vendor== libraries deserve even more scrutiny. After all, a vendor could remove or break a detection that was a lynchpin of your coverage strategy at any point — and never tell you. Only repeated testing of vendor coverage will catch that gap before a breach does.
 
 ## Conclusion
 
@@ -39,4 +39,4 @@ As custom [[detection libraries must be repeatedly validated]], how much more so
 - Plan and execute [[detection libraries must be repeatedly validated|recurring validation]] of your initial findings
 
 ## Footnotes
-[^1] Splunk, Elastic, and Palo Alto are notable exceptions
+[^1]: Splunk, Elastic, and Palo Alto are notable exceptions.

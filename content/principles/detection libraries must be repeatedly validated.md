@@ -5,23 +5,23 @@ tags:
 title: detection libraries must be repeatedly validated
 aliases:
 created: 2026-03-18,
-draft: true
+draft: false
 ---
-I've made this mistake more times than I care to admit - forgetting to revert the rule I modified to its original state, and only catching the issue months later. Perhaps I didn't remove the hostname I was using for testing, or I forgot to add back the ==entire== search clause after only testing ==part== of it. Either way, it seems I'd only catch that issue months later, after the rule was running in prod and potentially missing security events that entire time. Or, sometimes in the security incident post-mortem, an analyst would realize the LSASS dumping rule didn't fire because the logs have been broken for a year. 
+I've made this mistake more times than I care to admit — forgetting to revert a modified rule back to its original state, and only catching the problem months later. Maybe I left in a hostname I was using for testing, or I forgot to restore the ==entire== search clause after only testing ==part== of it. Either way, the rule had been running in prod, silently missing security events the whole time. Or, worse: an analyst discovers in a post-mortem that the LSASS dumping rule never fired because the logs have been broken for a year.
 
 > Security detection is a delicate thing. 
 
-There's a lot that can go wrong, from log collection, log delivery, event ingestion, event search/retrieval infrastructure, and finally rule logic errors. A failure at any point in that process can create False Negatives, alerts that should've fired on real security activity but never did - and there's no good way to find the missing alerts!
+There's a lot that can go wrong: log collection, log delivery, event ingestion, search/retrieval infrastructure, and finally the rule logic itself. A failure at any point in that chain creates False Negatives — alerts that should have fired on real security activity but never did. And there's no straightforward way to find what you're missing.
 
 ## Defining repeatable detection validation
-This is why ==repeatable detection validation== is so important. We have the foundation of this already - many detection engineers are doing *validation at rule creation time*. Folks understandably want to prove that the rule can generate True Positives at least once before it's operationalized - otherwise, that rule is worse than useless! However, environment/network drift, tuning mistakes, logging format or infrastructure changes, and a host of other problems can disrupt that once-validated rule. The only way to address this is to:
+This is why ==repeatable detection validation== is so important. We already have part of the foundation — many detection engineers do *validation at rule creation time*. It makes sense: you want to prove the rule can generate True Positives at least once before it goes live. But environment and network drift, tuning mistakes, logging format changes, infrastructure changes, and a host of other issues can break a once-validated rule. The only way to stay ahead of this is to:
 1. Repeatedly execute detection validation tests
 2. Link tests to our detections
 3. Inform someone when a detection rule is in a False Negative state (a test executed but the detection did not create an alert).
 
 ### Why use a system test
 
-What I'm proposing is more like a *system test* than a *unit test*. A unit test could be taking a sample log entry that the rule should always match, and ensuring the rule logic will consistently match that sample. That's a good thing, but it only addresses a few of the problems that could prevent the rule from firing - we need a more representative sample.
+What I'm proposing is more like a *system test* than a *unit test*. A unit test might take a sample log entry that the rule should always match and verify that the rule logic consistently matches it. That's useful, but it only addresses a narrow slice of what could go wrong — we need something more representative.
 
 ## How to do repeated validation
 
@@ -43,7 +43,7 @@ If done incorrectly, repeatable detection validation can make the situation much
 - Validation systems now have to be maintained and themselves monitored. 
 - BAS providers often offer "coverage metrics" that could drive detection development more towards covering a BAS test suite than addressing appropriate defensive gaps.
 
-But it's still a necessary approach, at least for the techniques [[some techniques should only be detected opportunistically|which must be detected comprehensively]]. I'll have more to say about how to do this well in future posts.
+But it's still a necessary approach, at least for the techniques [[some techniques should only be detected opportunistically|that must be detected comprehensively]]. I'll have more to say about how to do this well in future posts.
 
 ## Additional reading
 
