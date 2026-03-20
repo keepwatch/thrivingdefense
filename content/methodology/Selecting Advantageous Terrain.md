@@ -1,9 +1,9 @@
 ---
 title: Selecting Advantageous Terrain
 description: How defenders can identify advantageous terrain and focus limited resources on high-return detection efforts.
-author: "[[people/Jordan Anderson|Jordan Anderson]]"
 created: 2026-03-07
 tags:
+  - author/Jordan_Anderson
   - type/article
 aliases:
 ---

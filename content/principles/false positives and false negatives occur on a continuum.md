@@ -1,10 +1,11 @@
 ---
-tags: type/stub
+tags:
+  - author/Jordan_Anderson
+  - type/stub
 title: false positives and false negatives occur on a continuum
 description: Exploring the inherent tradeoff between false positives and false negatives when tuning detection rules.
 aliases:
 created: 2026-03-07, 10:26
-author: "[[people/Jordan Anderson|Jordan Anderson]]"
 ---
 First, a definition of terms:
 

@@ -1,10 +1,11 @@
 ---
-tags: type/stub
+tags:
+  - author/Jordan_Anderson
+  - type/stub
 title: Do not require comprehensive coverage for yielded techniques
 description: Why the number of detections linked to a yielded technique is a meaningless metric for comprehensive coverage.
 aliases:
 created: 2026-03-07, 09:58
-author: "[[people/Jordan Anderson|Jordan Anderson]]"
 ---
 Building off [[some techniques should only be detected opportunistically]] and the principles of *yielded techniques* established there, comprehensive coverage for some techniques is impossible. Therefore, when measuring coverage of these techniques, remember that:
 

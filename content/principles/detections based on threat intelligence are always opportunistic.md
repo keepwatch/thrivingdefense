@@ -1,10 +1,11 @@
 ---
-tags: type/stub
+tags:
+  - author/Jordan_Anderson
+  - type/stub
 title: detections based on threat intelligence are always opportunistic
 description: Why threat intelligence can only provide an opportunistic, not comprehensive, understanding of attack methods.
 aliases:
 created: 2026-03-07, 09:49
-author: "[[people/Jordan Anderson|Jordan Anderson]]"
 ---
 This can be expanded more, but said very simply:
 

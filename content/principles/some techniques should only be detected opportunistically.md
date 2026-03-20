@@ -1,10 +1,11 @@
 ---
-tags: type/stub
+tags:
+  - author/Jordan_Anderson
+  - type/stub
 title: some techniques should only be detected opportunistically
 description: Why some broad techniques cannot be detected comprehensively and must be treated as yielded techniques.
 aliases:
 created: 2026-03-07
-author: "[[people/Jordan Anderson|Jordan Anderson]]"
 ---
 Frequently, detection engineers are held to a standard of coverage based on the MITRE ATT&CK matrix. Detection coverage requires two things - an assessment of current state and a target state, with the coverage metric measuring the distance between those two states. Usually, MITRE ATT&CK techniques are used as the definition of the target state - if you could detect all ATT&CK techniques, or all the ATT&CK techniques you suspect would be used against your organization, you could claim complete detection coverage. Normally this takes the form of a MITRE ATT&CK heatmap with various user-controlled color shades (check out [[ACRE (ATT&CK Coverage Ratio Evaluation)]] for another approach). However, coverage calculations quickly run into a serious issue - how many detections are necessary to provide *sufficient* (often considered *comprehensive*) coverage of a given technique (say, `T1059.001 - Powershell`)? 10 detections? 100? 1000? 
 
