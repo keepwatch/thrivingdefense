@@ -1,14 +1,14 @@
 ---
 tags:
+  - author/Jordan_Anderson
   - type/definition
 title: ATT&CK Procedures and Instances
 description: Exploring the differences between MITRE ATT&CK 'instances' and On Detection 'procedures' for detection engineering.
 aliases:
   - ATT&CK Procedures and Instances
 created: 2026-03-07
-author: "[[people/Jordan Anderson|Jordan Anderson]]"
 ---
-The term *procedure* originates from the military, but enters common cybersecurity use in 2013, when it shows up in the [[content/Pyramid of Pain|Pyramid of Pain]]. Using this model, David J Bianco urges defenders to detect behavior (Tactics, Techniques, and Procedures (TTPs)) rather than indicators alone. Also in 2013, MITRE ATT&CK® classified attacker behavior into Tactics and Techniques while defining some procedures opportunistically.
+The term *procedure* originates from the military, but enters common cybersecurity use in 2013, when it shows up in the [[Pyramid of Pain|Pyramid of Pain]]. Using this model, David J Bianco urges defenders to detect behavior (Tactics, Techniques, and Procedures (TTPs)) rather than indicators alone. Also in 2013, MITRE ATT&CK® classified attacker behavior into Tactics and Techniques while defining some procedures opportunistically.
 
 There are two different (and incompatible) approaches to defining a procedure.
 
