@@ -12,5 +12,6 @@ Jordan is eager to work with other practitioners to turn the art of cybersecurit
 ## Contact info
 
 - [LinkedIn](https://www.linkedin.com/in/jordanpanderson/)
+- `jordan` @ `thrivingdetection.com`
 - Comment anywhere!
 
