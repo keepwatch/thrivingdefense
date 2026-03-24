@@ -51,6 +51,10 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer(),
   ],
   right: [
+    Component.ConditionalRender({
+      component: Component.RecentNotes({ limit: 5, showTags: false }),
+      condition: (page) => page.fileData.slug === "index",
+    }),
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
