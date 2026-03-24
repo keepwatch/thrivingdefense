@@ -1,7 +1,8 @@
 ---
 tags:
   - author/Jordan_Anderson
-  - type/stub
+  - theme/coverage
+  - type/article
 title: some techniques should only be detected opportunistically
 description: Why some broad techniques cannot be detected comprehensively and must be treated as yielded techniques.
 aliases:

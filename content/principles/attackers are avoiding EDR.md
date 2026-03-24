@@ -3,9 +3,9 @@ tags:
   - author/Jordan_Anderson
   - type/stub
 title: attackers are avoiding EDR
+description: Why EDR's success at the endpoint has pushed sophisticated attackers toward edge devices where defenders are blind.
 aliases:
 created: 2026-03-19,
-draft: true
 ---
 One of the great triumphs of EDR is that it forced a change in attacker behavior. More and more often, attackers will avoid the heavily fortified endpoint and go to the server environments where EDR coverage is more sparse. 
 

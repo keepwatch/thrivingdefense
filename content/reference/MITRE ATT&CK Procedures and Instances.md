@@ -3,7 +3,7 @@ tags:
   - author/Jordan_Anderson
   - type/definition
 title: ATT&CK Procedures and Instances
-description: Exploring the differences between MITRE ATT&CK 'instances' and On Detection 'procedures' for detection engineering.
+description: Why ATT&CK 'instances' and On Detection 'procedures' are different — and why that distinction matters.
 aliases:
   - ATT&CK Procedures and Instances
 created: 2026-03-07

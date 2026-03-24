@@ -3,6 +3,7 @@ tags:
   - author/Jordan_Anderson
   - type/article
 title: Where detections come from
+description: Internal rules, shared intelligence, and vendor coverage — understanding each source and its hidden tradeoffs.
 aliases:
 created: 2026-03-19,
 draft: false

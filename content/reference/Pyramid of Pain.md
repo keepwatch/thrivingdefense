@@ -3,6 +3,7 @@ tags:
   - author/Jordan_Anderson
   - type/stub
 title: Pyramid of Pain
+description: Why detecting attacker behaviors — not just indicators — forces costly changes that slow adversaries down.
 aliases:
 created: 2026-03-19,
 ---

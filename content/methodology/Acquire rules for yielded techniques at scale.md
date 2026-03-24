@@ -3,7 +3,7 @@ tags:
   - author/Jordan_Anderson
   - type/stub
 title: Acquire rules for yielded techniques at scale
-description: Why yielded techniques are impractical to detect manually and should instead be outsourced to collaboratively developed sources.
+description: Why yielded techniques should be outsourced to collaboratively maintained, shared detection sources.
 aliases:
 created: 2026-03-07, 10:28
 ---

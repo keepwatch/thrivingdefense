@@ -2,7 +2,9 @@
 tags:
   - author/Jordan_Anderson
   - type/stub
+  - theme/validation
 title: prove coverage with validation tests
+description: Deep technique research makes it possible to write exhaustive tests that conclusively prove — not assume — detection coverage.
 aliases:
 created: 2026-03-19,
 ---

@@ -5,6 +5,7 @@ created: 2026-03-07
 tags:
   - author/Jordan_Anderson
   - type/article
+  - theme/coverage
 aliases:
 ---
 > "He who defends everything, defends nothing" - Attributed to Frederick the Great

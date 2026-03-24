@@ -2,7 +2,9 @@
 tags:
   - author/Jordan_Anderson
   - type/article
+  - theme/validation
 title: detection libraries must be repeatedly validated
+description: Detection rules can silently fail for months. Repeatable validation tests are the only way to catch the gaps.
 aliases:
 created: 2026-03-18,
 draft: false
