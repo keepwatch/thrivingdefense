@@ -28,5 +28,6 @@ What does this information mean practically?
 
 - We need to identify more techniques that should not be detected comprehensively. The scripts used to calculate coverage for [[ACRE (ATT&CK Coverage Ratio Evaluation)|ACRE]] can help discern difficult-to-comprehensively-detect techniques. What do you think the standards should be?
 - We need to better understand non-OS, platform-specific techniques, including for [[Trusted Service Infrastructure (TSI)]]. Consider doing deep technique research and contributing it as a [[Technique Research Report (TRR)]]!
+- We need more technologies and processes that [[systematically disrupt attacker behavior]]. 
 
 
