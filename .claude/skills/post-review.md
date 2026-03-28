@@ -65,15 +65,36 @@ If no links are missing, say so.
 
 ### 5. LinkedIn preview
 
-Draft a LinkedIn post to promote this article. The post should:
+**Only generate this section if the frontmatter field `promoted` is set to `false`.** If `promoted` is `true`, missing, or not present, skip this section entirely and note that the post has already been promoted (or has no `promoted` field).
 
-- **Open with a hook** — a bold claim, surprising insight, or relatable pain point from the article (1-2 sentences). This must grab attention in the feed preview (first ~210 characters are visible before "...see more").
-- **Expand with value** — share 2-3 key insights or takeaways, using short paragraphs or line breaks for scannability. Use plain language, not jargon-heavy prose.
-- **End with a call to action** — invite readers to read the full post, share their experience, or comment. Include a placeholder `[LINK]` for the article URL.
-- Keep total length between 700–1300 characters (LinkedIn's sweet spot for engagement).
-- Do NOT use hashtags, emojis, or bullet-point walls.
-- Write in first person, matching the author's conversational-but-professional tone.
-- The goal is to draw readers into the blog, not to summarize everything — leave them wanting more.
+Draft a LinkedIn post to promote this article. Follow the tone and structure of these real examples:
+
+**Example A** (site launch / philosophy post):
+```
+My CISO once asked a simple question that spawned years of introspection - "how do we know if we have enough detections?" Answering this question requires defining what should or should not be detected and why, and my team and cross-industry peers have been working on the philosophy and science to get this answer right.
+
+With today's release of Thriving Defense, we're moving this conversation to the public realm. The site is more "digital garden" than blog, so expect these pages to be updated as we debate and improve definitions together. Your voice is essential too!
+
+To get started, check out [LINK] and let me know here or in the site comments what you think.
+```
+
+**Example B** (single-topic deep dive):
+```
+Security detection is a delicate thing. There's a lot that can go wrong, and a failure at any point in the process creates false negatives (alerts that should've fired but didn't).
+
+This is why detection libraries must be repeatedly validated. It's the only way to know that a rarely-firing rule is still working as designed, or to avoid accidentally tuning out essential detection logic. Does your organization repeatedly validate detections today? I'd love to hear about your experience - or you can check out the post to see why this is so important and how to get started.
+
+[LINK]
+```
+
+Key patterns from these examples:
+- **Hook with a concrete scenario or pain point** the audience recognizes (not generic thought-leadership phrasing)
+- **Bridge to the article's core argument** in 1-2 short paragraphs — share enough substance to be valuable on its own, but leave the depth for the post
+- **Close with engagement** — ask a direct question about the reader's experience, or invite them to share their perspective, with a `[LINK]` to the full post
+- Total length 400–800 characters (these are concise, not padded)
+- No hashtags, no emojis, no bullet-point walls
+- First person, conversational but professional — the author's natural voice, not "content marketing" voice
+- The goal is to start a conversation and draw readers in, not to exhaustively summarize
 
 Present the LinkedIn post in a code block for easy copying.
 
