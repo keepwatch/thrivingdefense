@@ -7,9 +7,9 @@ description: Why EDR's success at the endpoint has pushed sophisticated attacker
 aliases:
 created: 2026-03-19,
 ---
-One of the great triumphs of EDR is that it forced a change in attacker behavior. More and more often, attackers will avoid the heavily fortified endpoint and go to the server environments where EDR coverage is more sparse. 
+One of the great triumphs of EDR is that it [[systematically disrupt attacker behavior|forced a change in attacker behavior]]. More and more often, attackers will avoid the heavily fortified endpoint and go to the server environments where EDR coverage is more sparse.
 
-This is what victory for the defender looks like - a gap in the fighting to give enough breathing room before the next wave hits. Let's celebrate what we can.
+This is what victory for the defender looks like - as described in the [[Pyramid of Pain]], a gap in the fighting to give enough breathing room before the next wave hits. Let's celebrate what we can.
 
 ## Brickstorm
 > These intrusions are conducted with a particular focus on maintaining long-term stealthy access by deploying backdoors on appliances that do not support traditional endpoint detection and response (EDR) tools. The actor employs methods for lateral movement and data theft that generate minimal to no security telemetry.
