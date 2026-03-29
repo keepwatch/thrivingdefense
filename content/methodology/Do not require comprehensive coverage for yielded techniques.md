@@ -2,6 +2,7 @@
 tags:
   - author/Jordan_Anderson
   - type/stub
+  - yield-principle
 title: Do not require comprehensive coverage for yielded techniques
 description: Why the number of detections linked to a yielded technique is a meaningless metric for comprehensive coverage.
 aliases:
@@ -10,3 +11,7 @@ created: 2026-03-07, 09:58
 Building off [[some techniques should only be detected opportunistically]] and the principles of *yielded techniques* established there, comprehensive coverage for some techniques is impossible. Therefore, when measuring coverage of these techniques, remember that:
 
  > The number of detections linked to a yielded technique is meaningless (even if it's 0)
+
+The inverse of this statement is also true:
+
+> Detections for non-yielded techniques must comprehensively cover all possible [[MITRE ATT&CK Procedures and Instances|procedures]]

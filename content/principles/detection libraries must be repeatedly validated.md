@@ -8,6 +8,7 @@ description: Detection rules can silently fail for months. Repeatable validation
 aliases:
 created: 2026-03-18,
 draft: false
+promoted: true
 ---
 I've made this mistake more times than I care to admit — forgetting to revert a modified rule back to its original state, and only catching the problem months later. Maybe I left in a hostname I was using for testing, or I forgot to restore the ==entire== search clause after only testing ==part== of it. Either way, the rule had been running in prod, silently missing security events the whole time. Or, worse: an analyst discovers in a post-mortem that the LSASS dumping rule never fired because the logs have been broken for a year.
 
@@ -50,3 +51,4 @@ But it's still a necessary approach, at least for the techniques [[some techniqu
 ## Additional reading
 
 - [[Validating vendor detection effectiveness]]
+- [[Turning the TIDE with Test-Initiated Detection Engineering]]

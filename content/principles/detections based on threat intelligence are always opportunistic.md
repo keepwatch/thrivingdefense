@@ -13,7 +13,6 @@ This can be expanded more, but said very simply:
 - Of the attacks conducted by attackers, only some are detected
 - Of the attacks detected, only some are publicized
 
-Therefore, it is impossible to achieve comprehensive knowledge of how to execute a technique by ingesting threat intelligence. Additionally, while it can be useful to use threat intelligence and In-The-Wild detail to shape priorities, overreliance on this data can lead to detection overfitting on attackers bad enough to be detected.
+Therefore, it is impossible to achieve comprehensive knowledge of how to execute a technique by ingesting threat intelligence. Additionally, while it can be useful to use threat intelligence and In-The-Wild (ITW) detail to shape priorities, overreliance on this data can lead to detection overfitting on attackers bad enough to be detected.
 
-Said another way, it's impossible for an understand of what all attackers are doing today to produce a comprehensive understanding of what they could do in a particular area, which means [[Technique Research Report (TRR)]]-style research is good for comprehensive detection, and threat intelligence helpfully feeds [[some techniques should only be detected opportunistically|opportunistic detection]]
-
+Said another way, it's impossible for an understanding of what attackers are doing *today* or have done in the past to produce a comprehensive understanding of what they *could do* in a particular area, which means [[Technique Research Report (TRR)]]-style research is good for comprehensive detection, and threat intelligence helpfully feeds [[some techniques should only be detected opportunistically|opportunistic detection]].
