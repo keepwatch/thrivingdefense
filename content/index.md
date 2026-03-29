@@ -22,7 +22,4 @@ This site is based on Obsidian, a knowledge management system built on top of Ma
 
 ## Content clusters
 
-- 
 - #theme/validation talks about the challenges and opportunities for validating detection rules and avoiding false negatives
-- 
-
