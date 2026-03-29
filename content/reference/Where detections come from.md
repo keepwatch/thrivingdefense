@@ -29,7 +29,7 @@ Indicator sharing is a relatively mature concept (though a bit dated post-[[Pyra
 I've heard several reasons why organizations don't use Sigma rules:
 - The Sigma converter isn't efficient for their chosen rule language (a real and genuinely hard problem)
 - The Sigma converter isn't expressive enough to create all the detections they need (the lowest-common-denominator problem — if a technique only exists on one platform, forcing it into Sigma doesn't make much sense)
-- Sigma rules reflect a different detection philosophy (often summarized as "Sigma rules are too loud")
+- Sigma rules reflect a different detection philosophy (often summarized as "Sigma rules are too loud") — a tradeoff explored in [[false positives and false negatives occur on a continuum]]
 
 All of these problems are solvable, or at least manageable, but there's enough inertia that it's far easier to keep writing and maintaining your own rules than to invest in using shared rules effectively.
 ## Vendor rules

@@ -7,7 +7,7 @@ tags:
   - author/Jordan_Anderson
   - type/stub
 ---
-One of the reasons detection is challenging is that nearly every action we seek to *detect* has a legitimate purpose. For example, in [Kerberoasting](https://attack.mitre.org/techniques/T1558/003/), requesting a ticket is a normal part of the Kerberos workflow and therefore difficult to detect consistently. Practically, this takes an opportunistic thresholding approach (X requests in Y time) rather than a comprehensive one - see this [Sigma example](https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_kerberoasting_activity.yml#L7). 
+One of the reasons detection is challenging is that nearly every action we seek to *detect* has a legitimate purpose. For example, in [Kerberoasting](https://attack.mitre.org/techniques/T1558/003/), requesting a ticket is a normal part of the Kerberos workflow and therefore difficult to detect consistently. Practically, this takes an [[some techniques should only be detected opportunistically|opportunistic]] thresholding approach (X requests in Y time) rather than a comprehensive one - see this [Sigma example](https://github.com/SigmaHQ/sigma/blob/master/rules/windows/builtin/security/win_security_kerberoasting_activity.yml#L7). 
 
 There are some defensive categories that are less frequently used for legitimate purpose:
 
