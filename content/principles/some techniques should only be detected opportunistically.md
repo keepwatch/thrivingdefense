@@ -22,7 +22,7 @@ What principles can we infer from this? Since the current default is for us to t
 - [[Aggressively tune rules linked to yielded techniques]]
 - [[Acquire rules and tests for yielded techniques at scale]]
 
-To be clear, opportunistic detections can absolutely detect attacker activity and should still be part of our arsenal, but we must stop treating opportunistic and comprehensive detections the same. Far more of our scarce time (research, content creation/maintenance, and analyst review) must go towards comprehensive detection in order for us to move beyond surviving to thriving.  
+To be clear, opportunistic detections can absolutely detect attacker activity and should still be part of our arsenal, but we must stop treating opportunistic and comprehensive detections the same. Far more of our scarce time (research, content creation/maintenance, and analyst review) must go towards comprehensive detection in order for us to move beyond surviving to thriving. For a framework to help decide which techniques should be yielded, see [[only detect techniques where intent can be identified]].  
 
 ## Related content
 

@@ -14,8 +14,9 @@ This will be a living document that I'll update as I learn more.
 
 ## Standards for analysis
 
-- Many detections principle: techniques with a large number of detections for a single platform suggest instance-based detection and may need to be yielded
-- No detections principle: techniques with NO detections for a platform may represent a TRR research opportunity or no detection viability
+- Many detections principle: techniques with a large number of detections for a single platform suggest [[MITRE ATT&CK Procedures and Instances|instance-based]] detection and may need to be yielded
+- No detections principle: techniques with NO detections for a platform may represent a [[Technique Research Report (TRR)|TRR]] research opportunity or no detection viability
+- Intent principle: techniques where we cannot [[only detect techniques where intent can be identified|identify intent from context]] are strong candidates for yielding
 
 
 ## Conclusions
