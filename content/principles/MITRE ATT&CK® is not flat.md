@@ -20,16 +20,17 @@ The current list of platforms can be found [here](https://attack.mitre.org/matri
 
 The platforms break down into several categories as of this writing:
 
-- [[MITRE ATT&CK® PRE]]
-- Host OSes: Windows, MacOS, Linux (self-explanatory, most of ATT&CK fits into one of these three platforms)
-- Cloud:
-	- [Office Suite](https://attack.mitre.org/matrices/enterprise/cloud/officesuite/) - "The techniques below are known to target cloud-based office application suites such as Microsoft 365 and Google Workspace. Office application suites are SaaS platforms that typically combine email, chat, document management, and automation functionality for use in a collaborative environment."
-	- [Identity Provider](https://attack.mitre.org/matrices/enterprise/cloud/identityprovider/) - "The techniques below are known to target cloud-based identity-as-a-service (IDaaS) platforms such as Microsoft Entra ID and Okta. Identity providers are SaaS platforms that support identity management and single sign-on across multiple applications."
-	- [SaaS](https://attack.mitre.org/matrices/enterprise/cloud/saas/) - "The techniques below are known to target cloud-based software-as-a-service (SaaS) platforms. SaaS encompasses cloud-hosted applications with a variety of functionality."
-	- [IaaS](https://attack.mitre.org/matrices/enterprise/cloud/iaas/) - "The techniques below are known to target cloud-based infrastructure-as-a-service (IaaS) platforms. IaaS encompasses cloud-hosted infrastructure, such as virtual machines, object storage, databases, and serverless functionality."
-- [Network Devices](https://attack.mitre.org/matrices/enterprise/network-devices/) - "The techniques below are known to target network devices such as routers, switches, and load balancers."
-- [Containers](https://attack.mitre.org/matrices/enterprise/containers/) - "The techniques below are known to target containers and container orchestration systems such as Kubernetes."
-- [ESXi](https://attack.mitre.org/matrices/enterprise/esxi/) - "The techniques below are known to target VMware ESXi hypervisors."
+- [[MITRE ATT&CK® PRE]], 
+- Windows
+- MacOS
+- Linux
+- [Office Suite](https://attack.mitre.org/matrices/enterprise/cloud/officesuite/)
+- [Identity Provider](https://attack.mitre.org/matrices/enterprise/cloud/identityprovider/)
+- [SaaS](https://attack.mitre.org/matrices/enterprise/cloud/saas/)
+- [IaaS](https://attack.mitre.org/matrices/enterprise/cloud/iaas/)
+- [Network Devices](https://attack.mitre.org/matrices/enterprise/network-devices/)
+- [Containers](https://attack.mitre.org/matrices/enterprise/containers/)
+- [ESXi](https://attack.mitre.org/matrices/enterprise/esxi/)
 
 ### Can we use this platform list for coverage assessments?
 
@@ -43,22 +44,37 @@ There are several problems:
 	- It's not ME because `Office Suite` is a specific sub-type of SaaS product
 	- It's not CE because some techniques were included that are unique to a sub-SaaS-class. For example, [Poisoned Pipeline Execution, Technique T1677 - Enterprise | MITRE ATT&CK®](https://attack.mitre.org/techniques/T1677/) is included in `SaaS`, but it only applies to one type of SaaS product (CI/CD).
 	- Using `SaaS` as the label unfortunately excludes similar products that are on-prem (not cloud-deployed). For example, Github Actions (as part of Github Enterprise) or Jenkins are types of CI/CD products which can be deployed on-prem and are subject to T1677-style attacks. 
-- `Network Devices` can run `Linux` (or Unix), so these aren't ME. 
-	- Speaking of Unix, you could argue that it should be its own category, which would introduce further problems with potential overlaps. 
 
-I don't want to be too hard on MITRE - it is ==very difficult== to break attacker techniques into MECE-aligned categories while keeping the count of categories tight. But it does mean this list is not detailed enough to use 
-
+I don't want to be too hard on MITRE - it is ==very difficult== to break attacker techniques into MECE-aligned categories while keeping the count of categories tight. But it does mean this list is not detailed enough to use as-is.
 ## Product vs Platform
 
-Zooming out, there's a meta-problem - ==ATT&CK "platforms" are actually a mix of platform and product==. *Techniques* may be common across a platform (T1677 applies to CI/CD products), but the *procedures* vary across each product (the implementation of the abused feature and the telemetry outputs vary). 
+Zooming out, there's a meta-problem - ==ATT&CK "platforms" are actually a mix of platform and product==, when both those levels need to be defined more clearly. *Techniques* may be common across a platform (T1677 applies to CI/CD products), but the *procedures* vary across each product (the implementation of the abused feature and the telemetry outputs are not exactly the same). 
 
+Detection coverage requires linking detection rules to procedures, and procedures for the same technique can vary across different products. Consider T1677 mentioned earlier - the way this technique can be abused (and detected) varies across the CI/CD product implementing it, because the implementation of the abused feature and the telemetry outputs are done on a per-product basis (i.e. Github Actions vs Jenkins). Said another way, this technique needs procedure extraction (*a la* [[Technique Research Report (TRR)|TRRs]]) for each CI/CD product, and then to have per-product/per-procedure detection rules.
 
+So, in order to identify the full coverage gap, we need *platforms* to link related *techniques* together and to build tests/rules related to *procedures* for each *product* inside those platforms. The diagram below gives a simplified example, with three different products and a procedure for each (though this is certainly not the complete list of procedures):
 
-Detection coverage requires linking detection rules to procedures, and procedures for the same technique can vary across different products. Consider T1677 mentioned earlier - the way this technique can be abused (and detected) varies across the CI/CD product implementing it, because the implementation of the abused feature and the telemetry outputs are done on a per-product basis (i.e. Github Actions vs Jenkins). Said another way, this technique likely needs procedure extraction (*a la* [[Technique Research Report (TRR)|TRRs]]) for each CI/CD product, and then to have per-product/per-procedure detection rules.
+```mermaid
+  flowchart TD
+      T["T1677 — Poisoned Pipeline Execution<br>(Technique)"]
+      T --> PL["CI/CD<br>(Platform)"]
 
-So, in order to identify the full coverage gap, we need ==platforms== to link related techniques together and ==procedures== for each ==product== inside those platforms. 
+      PL --> GA["GitHub Actions<br>(Product)"]
+      PL --> JK["Jenkins<br>(Product)"]
+      PL --> GL["GitLab CI<br>(Product)"]
 
-ATT&CK's existing platforms are a mix of product and platform. The **bolded** entries are derived from ATT&CK platforms, and here's how we could fill them into a unified whole (the sub-lists are not comprehensive):
+      GA --> GA_P["Procedure: abuse<br>workflow YAML permissions"]
+      JK --> JK_P["Procedure: abuse<br>Jenkinsfile in SCM"]
+      GL --> GL_P["Procedure: abuse<br>.gitlab-ci.yml pipeline"]
+
+      GA_P --> GA_D["Detection: GitHub audit log<br>workflow_run events"]
+      JK_P --> JK_D["Detection: Jenkins API<br>job config change events"]
+      GL_P --> GL_D["Detection: GitLab audit events<br>pipeline modification"]
+```
+
+## Revisiting ATT&CK platforms
+
+ATT&CK's existing platforms are a mix of product and platform. The **bolded** entries are the currently-defined ATT&CK platforms, and here an example of how they could fit into a platform/product model (note: the product lists are not meant to be collectively exhaustive (CE), it's an example):
 
 - Endpoint/server OS
 	- **Windows**
@@ -78,10 +94,11 @@ ATT&CK's existing platforms are a mix of product and platform. The **bolded** en
 	- Azure (etc)
 - **Container**
 	- Kubernetes
-	- EKS
+	- EKS (and other managed IaaS container products)
 - **Network devices** OS
 	- Juniper
 	- Cisco
+	- F5/Big-IP
 - **Identity Provider**
 	- Microsoft Entra
 	- Okta
@@ -89,22 +106,15 @@ ATT&CK's existing platforms are a mix of product and platform. The **bolded** en
 - CI/CD
 	- Jenkins
 	- Github Actions
+	- Gitlab
 - Other [[Trusted Service Infrastructure (TSI)]] categories
-- Generic **SaaS** (prefer specific application categories *a la* TSI)
-
-Most importantly, different types of `products` within each `platform` may have different implementations of a certain feature, which makes detection specific to each product, not just the platform! I'll say that again:
+- Generic **SaaS** (we should prefer specific [[Trusted Service Infrastructure (TSI)|TSI-style]] application categories)
 
 >  Organizations must detect attacks against each relevant `technique` x ==product== pair (TxPr) to achieve "full coverage".
 ## Conclusions
 
-Platforms make our job of measuring coverage much more complex. Knowing that, what can we do to make incremental progress? 
+Expanding ATT&CK techniques into platform and product dimensions makes it obvious that measuring coverage is much more complex than it seems. Knowing that, what can we do to make incremental progress? 
 
-- Recognize 
-
-
-- Set a standard for how certain types of products map to MITRE platforms:
-	- We should use the more specific `Containers` platform to measure coverage against AWS EKS-style (managed Kubernetes) products (instead of the more general `IaaS`).
-		- On a related note, we should use `Office Suite` for O365 as a more specific version of `SaaS`, as well as `Network Devices` instead of `Linux`
-	- We should use `ESXi` as the platform for non-container hypervisors 
-	- We need to recognize that `SaaS` is not just cloud-hosted, and many of the techniques apply to on-prem systems too. Ideally, we'd split these into categories like Mandiant/Google did with [[Trusted Service Infrastructure (TSI)]] - those groupings would be a good place to start.
-- Stop using heatmaps to represent coverage. Switch to [[ACRE (ATT&CK Coverage Ratio Evaluation)]] or another platform-aware metric.
+- Recognize that ATT&CK-style coverage is inherently multi-dimensional, and that any metric treating it as flat will systematically undercount your gaps.
+- Since *procedures* must be derived from each *technique* x *product* pairing, there will be a lot of [[Technique Research Report (TRR)|TRRs]] to write, especially for [[Trusted Service Infrastructure (TSI)]] products that are not well represented in ATT&CK yet.
+- Stop using heatmaps to represent coverage: switch to [[ACRE (ATT&CK Coverage Ratio Evaluation)]] or another platform-aware metric.
