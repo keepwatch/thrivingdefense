@@ -4,6 +4,7 @@ tags:
   - type/article
   - theme/coverage
 title: MITRE ATT&CK is not flat
+description: Coverage claims are incomplete without accounting for ATT&CK's hidden dimension: technique × platform pairs.
 aliases:
 created: 2026-03-27,
 draft: false
@@ -45,7 +46,7 @@ There are several problems:
 	- It's not CE because some techniques were included that are unique to a sub-SaaS-class. For example, [Poisoned Pipeline Execution, Technique T1677 - Enterprise | MITRE ATT&CK®](https://attack.mitre.org/techniques/T1677/) is included in `SaaS`, but it only applies to one type of SaaS product (CI/CD).
 	- Using `SaaS` as the label unfortunately excludes similar products that are on-prem (not cloud-deployed). For example, Github Actions (as part of Github Enterprise) or Jenkins are types of CI/CD products which can be deployed on-prem and are subject to T1677-style attacks. 
 
-I don't want to be too hard on MITRE - it is ==very difficult== to break attacker techniques into MECE-aligned categories while keeping the count of categories tight. But it does mean this list is not detailed enough to use as-is.
+I don't want to be too hard on MITRE — it is ==very difficult== to break attacker techniques into MECE-aligned categories while keeping the count of categories tight. But it does mean this list is not detailed enough to use as-is.
 ## Product vs Platform
 
 Zooming out, there's a meta-problem - ==ATT&CK "platforms" are actually a mix of platform and product==, when both those levels need to be defined more clearly. *Techniques* may be common across a platform (T1677 applies to CI/CD products), but the *procedures* vary across each product (the implementation of the abused feature and the telemetry outputs are not exactly the same). 
