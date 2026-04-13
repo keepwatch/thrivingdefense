@@ -4,9 +4,33 @@ Produce a technique × platform coverage matrix across Sigma, Splunk Security Co
 
 ## Overview
 
-Coverage is: for each MITRE ATT&CK technique × platform pair, how many detection rules exist across each source. Techniques with zero rules across all sources represent gaps. Techniques with very high counts (20+) often signal "yielded" techniques — too broad to detect comprehensively.
+Coverage is: for each MITRE ATT&CK technique × platform pair, how many detection rules exist across each source. Techniques with zero rules across all sources represent gaps.
 
 The three MITRE canonical platform names used throughout are: **Windows**, **Linux**, **macOS**.
+
+The output of this skill — `platform_coverage.json` — is the required input for the ACRE Coverage Calculator skill, which scores your organization's detection coverage against this baseline.
+
+---
+
+## Setup: Detection Repos
+
+All three detection libraries (Sigma, Splunk Security Content, Elastic) are bundled in the [Security-Detections-MCP](https://github.com/MHaggis/Security-Detections-MCP) repo. Before parsing rules, ensure it is present:
+
+```bash
+if [ ! -d ~/Security-Detections-MCP ]; then
+  git clone --recurse-submodules https://github.com/MHaggis/Security-Detections-MCP ~/Security-Detections-MCP
+fi
+```
+
+Expected paths after cloning:
+
+| Library | Path |
+|---|---|
+| Sigma | `~/Security-Detections-MCP/detections/sigma/` |
+| Splunk Security Content | `~/Security-Detections-MCP/detections/security_content/` |
+| Elastic Detection Rules | `~/Security-Detections-MCP/detections/detection-rules/` |
+
+If any individual library directory is missing after the clone (e.g., a submodule was not initialized), initialize it with `git submodule update --init --recursive` inside `~/Security-Detections-MCP`.
 
 ---
 
@@ -35,10 +59,8 @@ Filter the platform list to only `Windows`, `Linux`, and `macOS` when building t
 
 ## Step 2: Parse Sigma Rules
 
-**Repo**: `https://github.com/SigmaHQ/sigma`
-
-**Local path (use if present)**: `~/Security-Detections-MCP/detections/sigma/`  
-**Clone target (if absent)**: `git clone https://github.com/SigmaHQ/sigma ~/sigma`
+**Local path**: `~/Security-Detections-MCP/detections/sigma/` (present after the Setup step above)  
+**Fallback clone**: `git clone --depth=1 https://github.com/SigmaHQ/sigma ~/Security-Detections-MCP/detections/sigma`
 
 **Scan**: all `.yml` files under:
 - `rules/` (recursively)
@@ -85,10 +107,8 @@ For endpoint platform analysis (Windows/Linux/macOS only), skip rules whose logs
 
 ## Step 3: Parse Splunk Security Content
 
-**Repo**: `https://github.com/splunk/security_content`
-
-**Local path (use if present)**: `~/Security-Detections-MCP/detections/security_content/`  
-**Clone target (if absent)**: `git clone https://github.com/splunk/security_content ~/security_content`
+**Local path**: `~/Security-Detections-MCP/detections/security_content/` (present after the Setup step above)  
+**Fallback clone**: `git clone --depth=1 https://github.com/splunk/security_content ~/Security-Detections-MCP/detections/security_content`
 
 **Scan**: all `.yml` files under `detections/` (recursively). Skip the `deprecated/` subdirectory.
 
@@ -136,10 +156,8 @@ tags:
 
 ## Step 4: Parse Elastic Detection Rules
 
-**Repo**: `https://github.com/elastic/detection-rules`
-
-**Local path (use if present)**: `~/Security-Detections-MCP/detections/detection-rules/`  
-**Clone target (if absent)**: `git clone https://github.com/elastic/detection-rules ~/detection-rules`
+**Local path**: `~/Security-Detections-MCP/detections/detection-rules/` (present after the Setup step above)  
+**Fallback clone**: `git clone --depth=1 https://github.com/elastic/detection-rules ~/Security-Detections-MCP/detections/detection-rules`
 
 **Scan**: all `.toml` files under `rules/` (recursively). Skip `rules/_deprecated/`.
 
@@ -251,7 +269,7 @@ By source:
   Splunk:         97 techniques covered
   Elasticsearch:  89 techniques covered
 
-Top 10 most-detected Linux techniques (yield candidates):
+Top 10 most-detected Linux techniques (by open-source rule count):
   T1059.004  Unix Shell                     Sigma:45  Splunk:12  Elastic:8
   T1055      Process Injection              Sigma:23  Splunk:18  Elastic:11
   ...
@@ -267,9 +285,9 @@ Repeat this block for Windows and macOS.
 
 ### Interpretation notes to include in output
 
-- **High counts (20+ rules)**: strong signal for a "yielded" technique — the community has attempted to enumerate instances of a fundamentally broad technique. Rules exist but the technique can never be comprehensively detected.
-- **Zero coverage**: may be genuinely hard to detect, have limited public tooling, or simply lack community attention. Low counts alone don't indicate a yield candidate.
-- **Covered by only one source**: worth noting — single-source coverage is more fragile than multi-source.
+- **Threshold for ACRE**: The ACRE skill counts a technique × platform pair in the detectable baseline only if it has ≥5 combined rules across Sigma + Splunk + Elastic. Pairs below that threshold are excluded from both numerator and denominator when scoring.
+- **Zero coverage**: may be genuinely hard to detect, have limited public tooling, or simply lack community attention. These pairs fall outside the ACRE denominator entirely.
+- **Covered by only one source**: worth noting — single-source coverage is more fragile than multi-source, and the combined count may not clear the ≥5 threshold.
 
 ---
 
@@ -284,3 +302,5 @@ Repeat this block for Windows and macOS.
 **Revoked and deprecated techniques**: Always exclude techniques where the STIX object has `revoked: true` or `x_mitre_deprecated: true`. Detection rules may reference technique IDs that have since been revoked; skip those counts silently.
 
 **Existing generated files**: If `sigma_technique_platform_counts.json`, `splunk_technique_platform_counts.json`, and `technique_platform_coverage.json` are already present in the working directory, they can be used directly as inputs to Step 5 rather than re-parsing the repos. These files use the same technique × platform structure described above. The existing `find_uncovered_techniques.py` script performs Step 5 and 6 and can be run directly if present.
+
+**Next step**: Once `platform_coverage.json` is written, run the ACRE Coverage Calculator skill to score your organization's detections against this baseline and identify prioritized coverage gaps.

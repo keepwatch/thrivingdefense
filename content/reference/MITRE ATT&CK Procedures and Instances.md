@@ -33,8 +33,10 @@ This is necessary because, as Jared points out in [part 1](https://specterops.io
 Jared goes on to further define operations and functions, but for our purpose, it's important to note that these two definitions of procedure are incompatible. In this latter definition, creating a logical relationship of technique to procedures allows researchers to define the boundaries of an attack via the [[Technique Research Report (TRR)]] and similar tools.
 ## Procedure vs Instance
 
-[[people/Andrew VanVleet|Andrew VanVleet]] recently wrote a blog post ([TTPI’s: Extending the Classic Model](https://medium.com/@vanvleet/ttpis-extending-the-classic-model-058c572b76f3)) that explains MITRE ATT&CK is not recording procedures, but rather *instances* (or perhaps *observables*). Using the more precise term benefits detection engineers who are working to define coverage.
+[[people/Andrew VanVleet|Andrew VanVleet]] recently wrote a blog post ([TTPI’s: Extending the Classic Model](https://medium.com/@vanvleet/ttpis-extending-the-classic-model-058c572b76f3)) that explains MITRE ATT&CK is not recording *procedures*, but more precisely is documenting *instances* (or perhaps *observables*). Using the more precise term benefits detection engineers who are working to define coverage.
 
 Remember:
 - Procedures can be comprehensively enumerated, tested, and detected
 - Instances are subject to threat intelligence reporting and recording, and  [[detections based on threat intelligence are always opportunistic]], not comprehensive.
+
+
