@@ -3,7 +3,7 @@ tags:
   - author/Jordan_Anderson
   - type/definition
 title: Technique Research Report (TRR)
-description: An introduction to TRRs, the structured format for deep, comprehensive detection research pioneered by Andrew VanVleet.
+description: Maps all procedures within an ATT&CK technique to enable comprehensive, testable detections.
 aliases:
 created: 2026-03-07, 09:21
 ---

@@ -1,13 +1,12 @@
 ---
-tags: [author/Jordan_Anderson, type/stub]
+tags:
+  - author/Jordan_Anderson
+  - type/stub
 title: Summiting the Pyramid Levels
+description: StP levels classify detection rule brittleness from easily-evaded indicators to hard-to-evade behaviors.
 aliases:
-
 created: 2026-04-12,
-
-draft: true
-
-promoted: false
+draft: false
 ---
 Summiting the Pyramid (StP) is a MITRE approach that seeks to decompose the top triangle of the [[Pyramid of Pain]], creating more precise criteria about the coverage and classification of different TTP-driven detections.
 
@@ -25,6 +24,6 @@ Feel free to read the [more comprehensive treatment on the official website](htt
 
 ## The technique definition problem 
 
-On one hand, StP does a great job of defining how a "TTP"-based rule could actually be quite brittle. Levels 1-3 especially are clearly described and can be intuitively, consistently mapped to the rule library, helping show whether the rule could be easily evaded by attackers. However, levels 4-5 are much harder to define and likely to become dumping grounds as a result. If combined with the [[Technique Research Report (TRR)]], which seeks to systematically define procedures and techniques, level 4 rules could correspond to "completely detect a procedure".
+On one hand, StP does a great job of defining how a "TTP"-based rule could actually be quite brittle. Levels 1-3 especially are clearly described and can be intuitively, consistently mapped to the rule library, helping show whether the rule could be easily evaded by attackers. However, levels 4-5 are much harder to define and likely to become dumping grounds as a result. If combined with the [[Technique Research Report (TRR)]], which systematically enumerates procedures within a technique, level 4 rules could correspond to "completely detect a procedure" (and level 5 rules could map to "completely detect a technique", if there was only one procedure available for that technique).
 
-This brings up a related problem that levels 1-3 focus on [[MITRE ATT&CK Procedures and Instances|instances]], specific tools or approaches that could be used to implement a technique. Detecting these instances can be useful [[some techniques should only be detected opportunistically|opportunistically]], though attackers can regularly develop new tooling (and therefore create new instances) faster than defenders can keep up. This problem will certainly worsen with GenAI-powered malware development.
+This brings up a related problem that levels 1-3 focus on [[MITRE ATT&CK Procedures and Instances|instances]]: specific tools or approaches that could be used to implement a technique. Detecting these instances can be useful [[some techniques should only be detected opportunistically|opportunistically]], though attackers can regularly develop new tooling (and therefore create new instances) faster than defenders can keep up. This problem will likely worsen with GenAI-powered malware development. In order to have robust detections, our rules must trend towards levels 4-5.

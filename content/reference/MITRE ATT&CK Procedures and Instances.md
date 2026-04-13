@@ -8,7 +8,7 @@ aliases:
   - ATT&CK Procedures and Instances
 created: 2026-03-07
 ---
-The term *procedure* originates from the military, but enters common cybersecurity use in 2013, when it shows up in the [[Pyramid of Pain|Pyramid of Pain]]. Using this model, David J Bianco urges defenders to detect behavior (Tactics, Techniques, and Procedures (TTPs)) rather than indicators alone. Also in 2013, MITRE ATT&CK® classified attacker behavior into Tactics and Techniques while defining some procedures opportunistically.
+The term *procedure* originates from the military, but enters common cybersecurity use in 2013, when it shows up in the [[Pyramid of Pain]]. Using this model, David J Bianco urges defenders to detect behavior (Tactics, Techniques, and Procedures (TTPs)) rather than indicators alone. Also in 2013, MITRE ATT&CK® classified attacker behavior into Tactics and Techniques while defining some procedures opportunistically.
 
 There are two different (and incompatible) approaches to defining a procedure.
 
@@ -33,10 +33,10 @@ This is necessary because, as Jared points out in [part 1](https://specterops.io
 Jared goes on to further define operations and functions, but for our purpose, it's important to note that these two definitions of procedure are incompatible. In this latter definition, creating a logical relationship of technique to procedures allows researchers to define the boundaries of an attack via the [[Technique Research Report (TRR)]] and similar tools.
 ## Procedure vs Instance
 
-[[people/Andrew VanVleet|Andrew VanVleet]] recently wrote a blog post ([TTPI’s: Extending the Classic Model](https://medium.com/@vanvleet/ttpis-extending-the-classic-model-058c572b76f3)) that explains MITRE ATT&CK is not recording *procedures*, but more precisely is documenting *instances* (or perhaps *observables*). Using the more precise term benefits detection engineers who are working to define coverage.
+[[people/Andrew VanVleet|Andrew VanVleet]] wrote a blog post ([TTPI’s: Extending the Classic Model](https://medium.com/@vanvleet/ttpis-extending-the-classic-model-058c572b76f3)) that explains MITRE ATT&CK is not recording *procedures*, but more precisely is documenting *instances* (or perhaps *observables*). Using the more precise term benefits detection engineers who are working to define coverage.
 
 Remember:
 - Procedures can be comprehensively enumerated, tested, and detected
-- Instances are subject to threat intelligence reporting and recording, and  [[detections based on threat intelligence are always opportunistic]], not comprehensive.
+- Instances are subject to threat intelligence reporting and recording, and [[detections based on threat intelligence are always opportunistic]], not comprehensive.
 
 

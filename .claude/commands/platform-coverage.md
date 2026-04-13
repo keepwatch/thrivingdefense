@@ -299,6 +299,8 @@ Repeat this block for Windows and macOS.
 
 **Elastic subtechniques vs. parents**: When a rule maps only to a parent technique (e.g., `T1059`) and not a subtechnique, count it toward the parent only. Do not expand it to all subtechniques.
 
-**Revoked and deprecated techniques**: Always exclude techniques where the STIX object has `revoked: true` or `x_mitre_deprecated: true`. Detection rules may reference technique IDs that have since been revoked; generate a separate reference to these rules as the end of the output section.
+**Revoked and deprecated techniques**: Always exclude techniques where the STIX object has `revoked: true` or `x_mitre_deprecated: true`. Detection rules may reference technique IDs that have since been revoked; skip those counts silently.
 
-**Next step**: Once `platform_coverage.json` is written, run the `acre-coverage` skill to score your organization's detections against this baseline and identify prioritized coverage gaps.
+**Existing generated files**: If `sigma_technique_platform_counts.json`, `splunk_technique_platform_counts.json`, and `technique_platform_coverage.json` are already present in the working directory, they can be used directly as inputs to Step 5 rather than re-parsing the repos. These files use the same technique × platform structure described above. The existing `find_uncovered_techniques.py` script performs Step 5 and 6 and can be run directly if present.
+
+**Next step**: Once `platform_coverage.json` is written, run the ACRE Coverage Calculator skill to score your organization's detections against this baseline and identify prioritized coverage gaps.
