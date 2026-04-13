@@ -5,7 +5,7 @@ tags:
 title: Mutually Exclusive and Collectively Exhaustive (MECE)
 aliases:
 created: 2026-04-03,
-draft: true
+draft: false
 ---
 It's very human to categorize, especially with small sets of data, but creating categories that meet the titular standard is very difficult. It requires complete knowledge of the thing being categorized and careful thought to find unexpected edges.
 

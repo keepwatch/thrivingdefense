@@ -4,9 +4,9 @@ tags:
   - type/article
   - theme/coverage
 title: MITRE ATT&CK is not flat
-description: Coverage claims are incomplete without accounting for ATT&CK's hidden dimension: technique × platform pairs.
+description: "Coverage claims are incomplete without accounting for ATT&CK's hidden dimension: technique × platform pairs."
 aliases:
-created: 2026-03-27,
+created: 2026-03-27
 draft: false
 promoted: false
 ---
