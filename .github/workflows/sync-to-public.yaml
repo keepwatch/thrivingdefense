@@ -18,6 +18,9 @@ jobs:
       - name: Remove draft content
         run: python3 scripts/filter-drafts.py
 
+      - name: Remove private-only files
+        run: rm -rf .github
+
       - name: Configure git
         run: |
           git config user.name "github-actions[bot]"
