@@ -19,7 +19,7 @@ jobs:
         run: python3 scripts/filter-drafts.py
 
       - name: Remove private-only files
-        run: rm -rf .github
+        run: rm -f .github/workflows/sync-to-public.yaml
 
       - name: Configure git
         run: |
