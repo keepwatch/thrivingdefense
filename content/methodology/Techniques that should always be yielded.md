@@ -8,7 +8,7 @@ created: 2026-03-27,
 draft: false
 promoted: false
 ---
-Building on the idea that [[some techniques should only be detected opportunistically]], the next problem is - which ones? Using open-source detection library parsing (originally done for the [[ACRE (ATT&CK Coverage Ratio Evaluation)|ACRE]] metric), as well as detection philosophy discussed on this site or elsewhere, I have identified techniques that should always be yielded (as well as describing the methodology).
+Building on the idea that [[some techniques should only be detected opportunistically]], the next problem is - which ones? Using open-source detection library parsing (originally done for the [[ACRE|ACRE]] metric), as well as detection philosophy discussed on this site or elsewhere, I have identified techniques that should always be yielded (as well as describing the methodology).
 
 NOTE: this is a living document, more to come!
 

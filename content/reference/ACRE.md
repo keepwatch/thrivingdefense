@@ -2,10 +2,10 @@
 tags:
   - author/Jordan_Anderson
   - type/article
-title: ACRE (ATT&CK Coverage Ratio Evaluation)
+title: ACRE
 description: Why ATT&CK heatmaps fail to answer "do we have enough detections?" — and what actually works instead.
 aliases:
-  - ACRE
+  - ACRE (ATT&CK Coverage Ratio Evaluation)
 created: 2026-03-07
 promoted: true
 ---
@@ -121,10 +121,10 @@ For all that background, it's quite easy to use ACRE.
 - Do this regularly - at least quarterly - so you can get credit for your detection improvements and see if the denominator (detectable techniques) evolves.  
 ### Generating ACRE score
 
-1. Use the provided [platform-coverage skill](raw/platform-coverage.md) and the Security-Detections-MCP to calculate which techniques are detectable (solving [[ACRE (ATT&CK Coverage Ratio Evaluation)#Problem 2 Determining What Is Detectable|problem 2]])
+1. Use the provided [platform-coverage skill](raw/platform-coverage.md) and the Security-Detections-MCP to calculate which techniques are detectable (solving [[ACRE#Problem 2 Determining What Is Detectable|problem 2]])
 	- Note: the skill is written to work with Claude Code, but any GenAI product should be able to adapt it. Just ask!
 	- Also, your GenAI product should be able to install the MCP for you - note that if you're using Windows, it's much easier to use Windows Subsystem for Linux (WSL) than the native Windows installation.
-2. Export your custom detections and run the [acre-coverage skill](raw/acre-coverage.md) to calculate your ACRE score (solving [[ACRE (ATT&CK Coverage Ratio Evaluation)#Problem 3 Defining the Numerator|problem 3]]). Your export must include the following fields for each rule:
+2. Export your custom detections and run the [acre-coverage skill](raw/acre-coverage.md) to calculate your ACRE score (solving [[ACRE#Problem 3 Defining the Numerator|problem 3]]). Your export must include the following fields for each rule:
 	- Creation Date
 	- MITRE ATT&CK techniques that the rule covers
 	- OS the rule covers — if your export doesn't include this, ask a GenAI tool to infer it from your data source or log source field

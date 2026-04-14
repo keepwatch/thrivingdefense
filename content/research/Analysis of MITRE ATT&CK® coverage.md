@@ -12,7 +12,7 @@ As part of the quest to identify [[Techniques that should always be yielded|yiel
 
 ## Technique x platform observations
 
-Starting from work we did for [[ACRE (ATT&CK Coverage Ratio Evaluation)|ACRE]], I knew that we needed to tackle ATT&CK platforms. From a coverage perspective, we can't say "I detect technique XYZ" without recognizing and accounting for each platform (for example, Powershell detection on Windows and MacOS is completely different, and the rules do not overlap). You can read more about that in [[MITRE ATT&CK® is not flat]].
+Starting from work we did for [[ACRE|ACRE]], I knew that we needed to tackle ATT&CK platforms. From a coverage perspective, we can't say "I detect technique XYZ" without recognizing and accounting for each platform (for example, Powershell detection on Windows and MacOS is completely different, and the rules do not overlap). You can read more about that in [[MITRE ATT&CK® is not flat]].
 
 Based on analysis done in April 2026:
 - There are 1837 total ==techniques x platform pairs (TxPs)==. 

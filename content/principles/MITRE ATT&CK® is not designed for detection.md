@@ -23,4 +23,4 @@ Together, we realized that the purpose of the project was to ==document attacker
 
 The high costs to collect context for some ATT&CK techniques disqualify them from effective security monitoring. This is not a flaw in ATT&CK, but in how detection engineering applies it. It's one reason why [[some techniques should only be detected opportunistically]], and shows us one of the criteria for yielding — [[only detect techniques where intent can be identified]].
 
-[^1]: See [[ACRE (ATT&CK Coverage Ratio Evaluation)]] as an alternative
+[^1]: See [[ACRE]] as an alternative

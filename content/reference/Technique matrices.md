@@ -16,7 +16,7 @@ MITRE ATT&CK® provided the OG technique matrix, displaying a grouped collection
 ![[acre_mitre-example-2.png]]
 *Source: [helpful reference on how to use ATT&CK Navigator](https://blog.agood.cloud/posts/2022/12/17/doing-more-with-attack-navigator/)*
 
-Of course, it's hard to build something [[Mutually Exclusive and Collectively Exhaustive (MECE)]], and far easier to create a new matrix ([relevant XKCD](https://xkcd.com/927/)), so there are several other matrices with unclear levels of overlap. This page will at least assemble them, and eventually we'll figure out how to deduplicate them for [[ACRE (ATT&CK Coverage Ratio Evaluation)|ACRE]] purposes.
+Of course, it's hard to build something [[Mutually Exclusive and Collectively Exhaustive (MECE)]], and far easier to create a new matrix ([relevant XKCD](https://xkcd.com/927/)), so there are several other matrices with unclear levels of overlap. This page will at least assemble them, and eventually we'll figure out how to deduplicate them for [[ACRE|ACRE]] purposes.
 
 ## Other matrices
 
