@@ -1,12 +1,13 @@
 ---
 tags:
   - author/Jordan_Anderson
-  - type/stub
+  - type/article
 title: ACRE (ATT&CK Coverage Ratio Evaluation)
 description: Why ATT&CK heatmaps fail to answer "do we have enough detections?" — and what actually works instead.
 aliases:
+  - ACRE
 created: 2026-03-07
-promoted: false
+promoted: true
 ---
 ## How do you know if you have enough detections?
 
