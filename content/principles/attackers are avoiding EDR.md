@@ -7,7 +7,7 @@ description: Why EDR's success at the endpoint has pushed sophisticated attacker
 aliases:
 created: 2026-03-19,
 ---
-One of the great triumphs of EDR is that it forced a change in attacker behavior. More and more often, attackers will avoid the heavily fortified endpoint and go to the server environments where EDR coverage is more sparse. 
+One of the great triumphs of EDR is that it forced a change in attacker behavior. More and more often, attackers will avoid the heavily fortified endpoint and go to the server environments where EDR coverage is more sparse — particularly [[Trusted Service Infrastructure (TSI)|Trusted Service Infrastructure]] products like network appliances and management tools that lack native EDR support.
 
 This is what victory for the defender looks like - a gap in the fighting to give enough breathing room before the next wave hits. Let's celebrate what we can.
 

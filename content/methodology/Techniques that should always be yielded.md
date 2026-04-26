@@ -91,7 +91,7 @@ Some notes on the above:
 
 ## Phase 2: Intent identification
 
-- Intent identification principle: Since [[MITRE ATT&CK® is not designed for detection]], we should [[only detect techniques where intent can be identified]]. 
+- Intent identification principle: Since [[MITRE ATT&CK® is not designed for detection]], we should [[some techniques should only be detected opportunistically|only detect techniques where intent can be identified]]. 
 
 
 [^1]: Sigma has [ESXCLI rules for Linux systems](https://github.com/search?q=repo%3ASigmaHQ%2Fsigma%20esxi&type=code), but not rules based on ESXi-specific telemetry
