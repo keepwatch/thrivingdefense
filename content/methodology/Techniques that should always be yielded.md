@@ -20,7 +20,7 @@ If all you want is the list of techniques, you can get it `here` (along with an 
 
 > NOTE: Because [[MITRE ATT&CK® is not flat]], we have to incorporate MITRE platforms into our analysis. It's possible that a technique should be yielded for Windows but not for macOS.
 - Many detections principle: techniques with a large number of detections for a single platform suggest instance-based detection and may need to be yielded
-- No detections principle: techniques with NO detections for a platform may represent a TRR research opportunity or no detection viability
+- No detections principle: techniques with NO detections for a platform may represent a [[Technique Research Report (TRR)|TRR research opportunity]] or no detection viability
 
 ### PRE platform
 
