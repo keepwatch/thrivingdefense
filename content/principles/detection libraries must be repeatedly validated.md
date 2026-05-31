@@ -14,7 +14,7 @@ I've made this mistake more times than I care to admit — forgetting to revert 
 
 > Security detection is a delicate thing. 
 
-There's a lot that can go wrong: log collection, log delivery, event ingestion, search/retrieval infrastructure, and finally the rule logic itself. A failure at any point in that chain creates False Negatives — alerts that should have fired on real security activity but never did. And there's no straightforward way to find what you're missing.
+There's a lot that can go wrong: log collection, log delivery, event ingestion, search/retrieval infrastructure, and finally the rule logic itself. A failure at any point in that chain creates [[false positives and false negatives occur on a continuum|False Negatives]] — alerts that should have fired on real security activity but never did. And there's no straightforward way to find what you're missing.
 
 ## Defining repeatable detection validation
 This is why ==repeatable detection validation== is so important. We already have part of the foundation — many detection engineers do *validation at rule creation time*. It makes sense: you want to prove the rule can generate True Positives at least once before it goes live. But environment and network drift, tuning mistakes, logging format changes, infrastructure changes, and a host of other issues can break a once-validated rule. The only way to stay ahead of this is to:

@@ -94,7 +94,7 @@ The flow diagram above is based on threat-intel-driven detection writing (which 
 
 Another approach is to [[implement tests based on TRRs]]. Since [[Technique Research Report (TRR)|TRRs]] break techniques into isolated [[MITRE ATT&CK Procedures and Instances|procedures]], tests linked to these reports can provide comprehensive coverage for a given technique. This is a great goal, but we need many more TRRs before this is a sufficient option on its own.
 
-[[Create tests at scale with GenAI|Creating tests at scale with GenAI]] may be possible in time, changing how we can approach instance- and procedure-based tests. More research is needed here.
+Creating tests at scale with GenAI may be possible in time, changing how we can approach instance- and procedure-based tests. More research is needed here.
 
 ## Other notes
 
