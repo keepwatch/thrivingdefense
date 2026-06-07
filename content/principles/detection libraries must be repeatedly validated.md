@@ -52,3 +52,4 @@ But it's still a necessary approach, at least for the techniques [[some techniqu
 
 - [[Validating vendor detection effectiveness]]
 - [[Turning the TIDE with Test-Initiated Detection Engineering]]
+- [[prove coverage with validation tests]]

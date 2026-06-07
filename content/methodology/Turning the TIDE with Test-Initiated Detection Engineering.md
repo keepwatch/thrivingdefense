@@ -92,7 +92,7 @@ F --> I
 
 The flow diagram above is based on threat-intel-driven detection writing (which is the path most organizations are using to write detection content). If you need to write detections this way, adding a test will save a lot of time over the course of the detection's life or prevent you from adding a duplicate one. However, this model will eventually create the same kind of problems we have with detection libraries — endlessly rewriting the same tests based on new threat intel reports, or a large body of tests that need to be searchable, deduplicated, managed, and maintained. Depending on the type of detection, we should actually [[Acquire rules and tests for yielded techniques at scale]].
 
-Another approach is to [[implement tests based on TRRs]]. Since [[Technique Research Report (TRR)|TRRs]] break techniques into isolated [[MITRE ATT&CK Procedures and Instances|procedures]], tests linked to these reports can provide comprehensive coverage for a given technique. This is a great goal, but we need many more TRRs before this is a sufficient option on its own.
+Another approach is to [[implement tests based on TRRs]]. Since [[Technique Research Report (TRR)|TRRs]] break techniques into isolated [[MITRE ATT&CK Procedures and Instances|procedures]], tests linked to these reports can [[prove coverage with validation tests|provide comprehensive, provable coverage]] for a given technique. This is a great goal, but we need many more TRRs before this is a sufficient option on its own.
 
 [[Create tests at scale with GenAI|Creating tests at scale with GenAI]] may be possible in time, changing how we can approach instance- and procedure-based tests. More research is needed here.
 

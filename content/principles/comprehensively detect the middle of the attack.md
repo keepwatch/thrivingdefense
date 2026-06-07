@@ -9,7 +9,7 @@ created: 2026-04-11,
 draft: false
 promoted: false
 ---
-Comprehensive detection means we should focus our efforts on the parts of attacks that provide the most substantial return on investment (this is the principle of [[some techniques should only be detected opportunistically]]). Intuitively, that's the "middle" of the attack. 
+Comprehensive detection means we should focus our efforts on the parts of attacks that provide the most substantial return on investment (this is the principle of [[some techniques should only be detected opportunistically]]). Intuitively, that's the "middle" of the attack — the [[Selecting Advantageous Terrain|advantageous terrain]] we should be defending.
 
 
 In the heatmap below, the attack path usually flows left-to-right. 

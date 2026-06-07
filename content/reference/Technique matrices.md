@@ -11,7 +11,7 @@ promoted: false
 ---
 ## What is a technique matrix?
 
-MITRE ATT&CK® provided the OG technique matrix, displaying a grouped collection of attacker tactics and techniques. Here's an example below:
+[[MITRE ATT&CK® is not flat|MITRE ATT&CK®]] provided the OG technique matrix, displaying a grouped collection of attacker tactics and techniques. Here's an example below:
 
 ![[acre_mitre-example-2.png]]
 *Source: [helpful reference on how to use ATT&CK Navigator](https://blog.agood.cloud/posts/2022/12/17/doing-more-with-attack-navigator/)*
