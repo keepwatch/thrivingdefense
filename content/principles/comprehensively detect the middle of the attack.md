@@ -20,6 +20,6 @@ Attackers collect background data, gain initial access, establish a persistent f
 
 [Many](https://taosecurity.blogspot.com/2009/05/defenders-dilemma-and-intruders-dilemma.html) [trusted](https://techcrunch.com/2023/02/07/cybersecurity-teams-beware-the-defenders-dilemma-is-a-lie/) [cybersecurity professionals](https://www.securitymagazine.com/blogs/14-security-blog/post/100902-how-to-transform-the-defenders-dilemma-into-the-defenders-advantage) have observed that the defender needs to be able to detect the attack before the attacker's goals are fully realized, and that the defender has many opportunities to find the attacker before that point. 
 
-> Since we can yield early stages of the attack, and since we must detect before impact, that means we should focus on the techniques in the middle of the attack.
+> Since we can [[Techniques that should always be yielded|yield early stages of the attack]], and since we must detect before impact, that means we should focus on the techniques in the middle of the attack.
 
 [^1]: Unless the detection drives automatic prevention/response, which it usually doesn't in a SOC (maybe in a vendor product!)

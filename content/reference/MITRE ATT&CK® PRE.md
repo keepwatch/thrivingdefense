@@ -17,4 +17,4 @@ There are two notable exceptions to the yield recommendation above. Defenders ca
 - [Acquire Infrastructure: Domains, Sub-technique T1583.001 - Enterprise | MITRE ATT&CK®](https://attack.mitre.org/techniques/T1583/001/) 
 - [Obtain Capabilities: Digital Certificates, Sub-technique T1588.004 - Enterprise | MITRE ATT&CK®](https://attack.mitre.org/techniques/T1588/004/)
 
-The parent techniques and remaining sub-techniques should be yielded and only detected opportunistically.
+The parent techniques and remaining sub-techniques should be [[Techniques that should always be yielded|yielded]] and only detected opportunistically.
