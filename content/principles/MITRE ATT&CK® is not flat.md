@@ -4,8 +4,9 @@ tags:
   - type/article
   - theme/coverage
 title: MITRE ATT&CK is not flat
+description: "Coverage claims are incomplete without accounting for ATT&CK's hidden dimension: technique × platform pairs."
 aliases:
-created: 2026-03-27,
+created: 2026-03-27
 draft: false
 promoted: false
 ---
@@ -13,7 +14,7 @@ The most common representation for MITRE ATT&CK® is as [a heatmap](https://atta
 
 > Organizations must detect attacks against each relevant `technique` x `platform` pair (TxP) to achieve "full coverage".
 
-[Valid Accounts, Technique T1078 - Enterprise | MITRE ATT&CK®](https://attack.mitre.org/techniques/T1078/), for example, is in 10 different platforms, and coverage would not be complete without detection in all 10 platforms. I've written [[ACRE (ATT&CK Coverage Ratio Evaluation)|elsewhere]] about how difficult it is to measure coverage with a heatmap, and one key reason is it oversimplifies the landscape. How many technique-linked detections across how many platforms must be in place before you are willing to rate overall T1078 coverage as "good"?
+[Valid Accounts, Technique T1078 - Enterprise | MITRE ATT&CK®](https://attack.mitre.org/techniques/T1078/), for example, is in 10 different platforms, and coverage would not be complete without detection in all 10 platforms. I've written [[ACRE|elsewhere]] about how difficult it is to measure coverage with a heatmap, and one key reason is it oversimplifies the landscape. How many technique-linked detections across how many platforms must be in place before you are willing to rate overall T1078 coverage as "good"?
 ## What platforms are in ATT&CK?
 
 The current list of platforms can be found [here](https://attack.mitre.org/matrices/enterprise/), as well as an interactive navigator layer showing which techniques are linked to which platforms. 
@@ -45,7 +46,7 @@ There are several problems:
 	- It's not CE because some techniques were included that are unique to a sub-SaaS-class. For example, [Poisoned Pipeline Execution, Technique T1677 - Enterprise | MITRE ATT&CK®](https://attack.mitre.org/techniques/T1677/) is included in `SaaS`, but it only applies to one type of SaaS product (CI/CD).
 	- Using `SaaS` as the label unfortunately excludes similar products that are on-prem (not cloud-deployed). For example, Github Actions (as part of Github Enterprise) or Jenkins are types of CI/CD products which can be deployed on-prem and are subject to T1677-style attacks. 
 
-I don't want to be too hard on MITRE - it is ==very difficult== to break attacker techniques into MECE-aligned categories while keeping the count of categories tight. But it does mean this list is not detailed enough to use as-is.
+I don't want to be too hard on MITRE — it is ==very difficult== to break attacker techniques into MECE-aligned categories while keeping the count of categories tight. But it does mean this list is not detailed enough to use as-is.
 ## Product vs Platform
 
 Zooming out, there's a meta-problem - ==ATT&CK "platforms" are actually a mix of platform and product==, when both those levels need to be defined more clearly. *Techniques* may be common across a platform (T1677 applies to CI/CD products), but the *procedures* vary across each product (the implementation of the abused feature and the telemetry outputs are not exactly the same). 
@@ -117,4 +118,4 @@ Expanding ATT&CK techniques into platform and product dimensions makes it obviou
 
 - Recognize that ATT&CK-style coverage is inherently multi-dimensional, and that any metric treating it as flat will systematically undercount your gaps.
 - Since *procedures* must be derived from each *technique* x *product* pairing, there will be a lot of [[Technique Research Report (TRR)|TRRs]] to write, especially for [[Trusted Service Infrastructure (TSI)]] products that are not well represented in ATT&CK yet.
-- Stop using heatmaps to represent coverage: switch to [[ACRE (ATT&CK Coverage Ratio Evaluation)]] or another platform-aware metric.
+- Stop using heatmaps to represent coverage: switch to [[ACRE]] or another platform-aware metric.

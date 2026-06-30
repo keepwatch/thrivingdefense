@@ -41,7 +41,7 @@ There are products in the Breach & Attack Simulation (BAS) space that seem like 
 If done incorrectly, repeatable detection validation can make the situation much worse, or at least, much more complicated:
 
 - The difficulty of managing a detection library is compounded with the difficulty of managing a validation library. 
-	- The question of validation coverage ("how do you know if you have enough validation tests?") echoes [[ACRE (ATT&CK Coverage Ratio Evaluation)#How do you know if you have enough detections?|the timeless detection coverage question]]. 
+	- The question of validation coverage ("how do you know if you have enough validation tests?") echoes [[ACRE#How do you know if you have enough detections?|the timeless detection coverage question]]. 
 	- On a related note, how do you avoid building duplicative validation tests? Searching through the validation library for an overlap is non-trivial (the same problem exists within the detection library).
 - Validation systems now have to be maintained and themselves monitored. 
 - BAS providers often offer "coverage metrics" that could drive detection development more towards covering a BAS test suite than addressing appropriate defensive gaps.

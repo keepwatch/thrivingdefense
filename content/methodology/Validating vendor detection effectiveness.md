@@ -4,7 +4,7 @@ tags:
   - type/article
   - theme/validation
 title: Validating vendor detection effectiveness
-description: Why "trust us" isn't good enough — and how TRR-based tests can hold your vendor accountable for detection gaps.
+description: Why "trust us" isn't enough — and how TRR-based tests can hold your vendor accountable for detection gaps.
 aliases:
 created: 2026-03-19,
 draft: false

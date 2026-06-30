@@ -12,7 +12,7 @@ import sys
 
 CONTENT_DIR = "content"
 PRIVATE_FILES = ["CLAUDE.md"]
-PRIVATE_DIRS = [os.path.join(CONTENT_DIR, "templates")]
+PRIVATE_DIRS = [os.path.join(CONTENT_DIR, "templates"), ".claude"]
 
 DRAFT_PATTERN = re.compile(r"^draft:\s*true\s*$", re.MULTILINE)
 FRONTMATTER_PATTERN = re.compile(r"^---\s*\n(.*?)\n---", re.DOTALL)
