@@ -1,0 +1,4 @@
+interface:
+  display_name: "Multi-Perspective Review"
+  short_description: "Review security writing from five personas"
+  default_prompt: "Use $multi-perspective-review to review this cybersecurity article from multiple perspectives."

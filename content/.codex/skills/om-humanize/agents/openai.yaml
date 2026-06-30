@@ -1,0 +1,4 @@
+interface:
+  display_name: "OM Humanize"
+  short_description: "Rewrite text to sound more like the author."
+  default_prompt: "Humanize this draft while preserving its meaning and links."
