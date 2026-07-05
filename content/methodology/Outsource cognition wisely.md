@@ -21,7 +21,7 @@ Even in cases where we question the AI output, we are subject to another System 
 
 While reading this paper, I was struck by how cybersecurity teams can have a similar relationship to AI as they do with their vendors, a phenomenon that predates AI. In other words, Company A can depend **absolutely** on Vendor 1 for their host-based security, not just for tooling but also for strategy. There's subtlety here; to go back to the AI metaphor, using computers (even AI) for discrete tasks is not necessarily cognitive surrender. You can delegate a specific task to AI or use a calculator to add numbers without getting into this territory, but here are some detection-engineering specific examples:
 
-- Measuring detection coverage against alignment to a [[BAS]] vendor's test library (this presumes that the BAS vendor's tests are the coverage target - see [[Validating vendor detection effectiveness]])
+- Measuring detection coverage against alignment to a [[BAS]] vendor's test library (this presumes that the BAS vendor's tests are the coverage target - see [[Validating vendor detection effectiveness]] and [[detection libraries must be repeatedly validated]])
 - Limiting detection research/assessments to existing telemetry sources, and never provoking vendors to provide the new telemetry needed
 - Following your Managed Security Service Provider (MSSP)'s recommendations to determine which data sources are required
 - Delegating detection coverage and responsibility in a particular scope to a vendor, such as only using an EDR for host-based detections
