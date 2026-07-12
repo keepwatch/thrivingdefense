@@ -12,6 +12,6 @@ C. Thi Nguyen is a philosopher with a wide scope of interests (he wrote a fascin
 
 > Real life is complex and, unlike in a game, clarity (of objective/goal or achievement/progress) is very difficult to achieve.
 
-This is a powerful principle that I plan to develop fully later.
+This is a powerful principle that I plan to develop fully later. See [[Managing human context windows]] for one organizational manifestation: managers who depend on metrics sacrifice the underlying knowledge for the feeling of clarity.
 
 [^1]: Nguyen, C.. (2021). The Seductions of Clarity. Royal Institute of Philosophy Supplement. 10.1017/S1358246121000035. 
