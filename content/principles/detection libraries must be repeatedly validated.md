@@ -33,8 +33,8 @@ There are several open-source test libraries (such as [Atomic Red Team](https://
 
 The open-source libraries also focus on host-based detections (which are admittedly far easier to execute!), but network- or application-based emulations are harder to execute through ART's host-based framework, which also means they are less likely to have pre-built tests.
 
-### Vendor (BAS)
-There are products in the Breach & Attack Simulation (BAS) space that seem like they would be good fits for this problem. Like ART, they also contain test suites and also provide scheduling, and they do offer a greater degree of test types. However, they seem designed for a different problem - determining if your organization can **block** or detect known attack patterns. This means the linking of tests to detections, or alerting on false negatives, often still needs to be built. I haven't found a vendor already offering this as a service, but we have found vendors who are willing to work with us - [[Jordan Anderson#Contact info|reach out]] if you'd like a recommendation.
+### Vendor ([[BAS]])
+There are products in the [[BAS|Breach & Attack Simulation (BAS)]] space that seem like they would be good fits for this problem. Like ART, they also contain test suites and also provide scheduling, and they do offer a greater degree of test types. However, they seem designed for a different problem - determining if your organization can **block** or detect known attack patterns. This means the linking of tests to detections, or alerting on false negatives, often still needs to be built. I haven't found a vendor already offering this as a service, but we have found vendors who are willing to work with us - [[Jordan Anderson#Contact info|reach out]] if you'd like a recommendation.
 
 ## Challenges
 
@@ -44,7 +44,7 @@ If done incorrectly, repeatable detection validation can make the situation much
 	- The question of validation coverage ("how do you know if you have enough validation tests?") echoes [[ACRE#How do you know if you have enough detections?|the timeless detection coverage question]]. 
 	- On a related note, how do you avoid building duplicative validation tests? Searching through the validation library for an overlap is non-trivial (the same problem exists within the detection library).
 - Validation systems now have to be maintained and themselves monitored. 
-- BAS providers often offer "coverage metrics" that could drive detection development more towards covering a BAS test suite than addressing appropriate defensive gaps.
+- [[BAS]] providers often offer "coverage metrics" that could drive detection development more towards covering a BAS test suite than addressing appropriate defensive gaps.
 
 But it's still a necessary approach, at least for the techniques [[some techniques should only be detected opportunistically|that must be detected comprehensively]]. I'll have more to say about how to do this well in future posts.
 
