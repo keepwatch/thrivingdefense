@@ -20,7 +20,7 @@ But how do we **know**? How can we decide whether we can trust the vendor to det
 
 ## Covering vendor gaps
 
-Assuming we want to fill the vendor's gaps with our own detections, what can we do to describe those gaps **before** an attack occurs? Well, we could use one of many Breach & Attack Simulation (BAS) products, or potentially an open-source alternative like Atomic Red Team. These products provide a native test suite that would allow validation of detection & prevention coverage *against the tests provided within the BAS/ART product*. Of course, going back to the "do you trust the vendor/product" question, you cannot know that the BAS/ART tests overlap well with your detection objectives (in my experience, vendor test suites map to a small fraction of a custom rule library). 
+Assuming we want to fill the vendor's gaps with our own detections, what can we do to describe those gaps **before** an attack occurs? Well, we could use one of many [[BAS|Breach & Attack Simulation (BAS)]] products, or potentially an open-source alternative like Atomic Red Team. These products provide a native test suite that would allow validation of detection & prevention coverage *against the tests provided within the BAS/ART product*. Of course, going back to the "do you trust the vendor/product" question, you cannot know that the BAS/ART tests overlap well with your detection objectives (in my experience, vendor test suites map to a small fraction of a custom rule library). 
 
 Alternatively, we can [[prove coverage with validation tests]]. The key word here is **prove**, because in this case, with complete understanding of a given technique and platform pair, a complete set of tests can be written for each procedure. And this gets to the key principle:
 

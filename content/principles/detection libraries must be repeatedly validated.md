@@ -33,8 +33,8 @@ There are several open-source test libraries (such as [Atomic Red Team](https://
 
 The open-source libraries also focus on host-based detections (which are admittedly far easier to execute!), but network- or application-based emulations are harder to execute through ART's host-based framework, which also means they are less likely to have pre-built tests.
 
-### Vendor (BAS)
-There are products in the Breach & Attack Simulation (BAS) space that seem like they would be good fits for this problem. Like ART, they also contain test suites and also provide scheduling, and they do offer a greater degree of test types. However, they seem designed for a different problem - determining if your organization can **block** or detect known attack patterns. This means the linking of tests to detections, or alerting on false negatives, often still needs to be built. I haven't found a vendor already offering this as a service, but we have found vendors who are willing to work with us - [[Jordan Anderson#Contact info|reach out]] if you'd like a recommendation.
+### Vendor ([[BAS]])
+There are products in the [[BAS|Breach & Attack Simulation (BAS)]] space that seem like they would be good fits for this problem. Like ART, they also contain test suites and also provide scheduling, and they do offer a greater degree of test types. However, they seem designed for a different problem - determining if your organization can **block** or detect known attack patterns. This means the linking of tests to detections, or alerting on false negatives, often still needs to be built. I haven't found a vendor already offering this as a service, but we have found vendors who are willing to work with us - [[Jordan Anderson#Contact info|reach out]] if you'd like a recommendation.
 
 ## Challenges
 
