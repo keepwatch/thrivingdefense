@@ -10,4 +10,4 @@ promoted: false
 ---
 BAS = Breach & Attack Simulation
 
-This is a product class designed to test detection and prevention controls against known attacks.
+This is a [[Validating vendor detection effectiveness|product class designed to test detection and prevention controls]] against known attacks.

@@ -9,7 +9,7 @@ created: 2026-03-10,
 draft: false
 promoted: false
 ---
-MITRE ATT&CK® is **everywhere** in detection engineering. Vendor products label alerts with ATT&CK techniques, EDRs claim 100% mitigation in [evaluation scenarios](https://evals.mitre.org/), and detection engineering consultants recommend building "ATT&CK heatmaps" as the best practice for understanding "detection coverage"[^1]. But have you ever stopped to wonder how ATT&CK was made, and whether it's suited to detection?
+MITRE ATT&CK® is **everywhere** in detection engineering. Vendor products label alerts with ATT&CK techniques, EDRs claim 100% mitigation in [evaluation scenarios](https://evals.mitre.org/), and detection engineering consultants recommend building [[MITRE ATT&CK® is not flat|"ATT&CK heatmaps"]] as the best practice for understanding "detection coverage"[^1]. But have you ever stopped to wonder how ATT&CK was made, and whether it's suited to detection?
 
 While discussing how [[attackers abuse legitimate capabilities]] with my friend [[Michael H|Michael]], we were asking the same question. How is it possible that so many techniques in ATT&CK are so difficult to detect comprehensively and with low [[false positives and false negatives occur on a continuum|false positive rates]]? [[some techniques should only be detected opportunistically|Elsewhere]], I've mentioned some of these, and more come easily to mind: PowerShell, Scheduled Tasks, Valid Accounts, Kerberoasting, or System Shutdown. 
 
@@ -21,6 +21,6 @@ Together, we realized that the purpose of the project was to ==document attacker
 
 > Key principle: Attacker behavior can be labeled after an incident without those labels corresponding to usable detections
 
-The high costs to collect context for some ATT&CK techniques disqualify them from effective security monitoring. This is not a flaw in ATT&CK, but in how detection engineering applies it. It's one reason why [[some techniques should only be detected opportunistically]], and shows us one of the criteria for yielding — [[only detect techniques where intent can be identified]].
+The high costs to collect context for some ATT&CK techniques disqualify them from effective security monitoring. This is not a flaw in ATT&CK, but in how detection engineering applies it. It's one reason why [[some techniques should only be detected opportunistically]], and shows us one of the criteria for yielding — [[some techniques should only be detected opportunistically|only detect techniques where intent can be identified]].
 
 [^1]: See [[ACRE]] as an alternative
