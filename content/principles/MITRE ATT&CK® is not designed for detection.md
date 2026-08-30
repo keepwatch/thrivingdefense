@@ -21,6 +21,8 @@ Together, we realized that the purpose of the project was to ==document attacker
 
 > Key principle: Attacker behavior can be labeled after an incident without those labels corresponding to usable detections
 
+This same limitation applies to threat intelligence: since [[detections based on threat intelligence are always opportunistic|threat intel only captures a subset of what attackers have done, not all they could do]], it cannot produce comprehensive detection coverage either.
+
 The high costs to collect context for some ATT&CK techniques disqualify them from effective security monitoring. This is not a flaw in ATT&CK, but in how detection engineering applies it. It's one reason why [[some techniques should only be detected opportunistically]], and shows us one of the criteria for yielding — [[only detect techniques where intent can be identified]].
 
 [^1]: See [[ACRE]] as an alternative
