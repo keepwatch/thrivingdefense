@@ -5,6 +5,7 @@ tags:
 title: Technique Research Report (TRR)
 description: Maps all procedures within an ATT&CK technique to enable comprehensive, testable detections.
 aliases:
+  - TRR
 created: 2026-03-07, 09:21
 ---
 > A TRR documents the distinct procedures that implement a technique, including the background and technical information necessary to understand how those procedures work. **TRRs provide the context, information, and potential telemetry needed to create a robust detection strategy tailored to your specific environment.**

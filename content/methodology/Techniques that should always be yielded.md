@@ -14,7 +14,7 @@ NOTE: this is a living document, more to come!
 
 ## Conclusions
 
-If all you want is the list of techniques, you can get it `here` (along with an ATT&CK navigator layer `here`). Keep reading if you want to know why I excluded particular techniques.
+If all you want is the list of techniques, I'll generate a list eventually. Keep reading if you want to know the justification for various removals.
 
 ## Phase 1: Open-source rule library analysis
 
