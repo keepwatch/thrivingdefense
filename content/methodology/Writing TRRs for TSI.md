@@ -1,7 +1,7 @@
 ---
 tags:
   - author/Jordan_Anderson
-  - type/stub
+  - type/article
 title: Writing TRRs for TSI
 aliases:
 created: 2026-08-30,
@@ -9,7 +9,7 @@ draft: false
 promoted: false
 ---
 
-I believe the deep research of [[Technique Research Report (TRR)]]s is the path forward for detection, and also worry how unprepared we are to detect compromise of [[Trusted Service Infrastructure (TSI)]]. As our enterprises grow increasingly complex and interconnected, more and more management work is executed through TSI products like application deployers, CI/CD, password vaults, and workflow automation tools. These products (when SaaS-hosted) can provide initial-access vectors through compromise or exploitation, but are also trivially accessible through stolen user cookies. With that concern in mind, what would be required to write TRRs on TSI products?
+I believe the deep research of [[Technique Research Report (TRR)|Technique Research Report (TRR)s]] is the path forward for detection, and also worry how unprepared we are to detect compromise of [[Trusted Service Infrastructure (TSI)]]. As our enterprises grow increasingly complex and interconnected, more and more management work is executed through TSI products like application deployers, CI/CD, password vaults, and workflow automation tools. These products (when SaaS-hosted) can provide initial-access vectors through compromise or exploitation, but are also trivially accessible through stolen user cookies. With that concern in mind, what would be required to write TRRs on TSI products?
 
 I had to consider this problem while reading [MDSec's excellent report on attacking ServiceNow](https://www.mdsec.co.uk/2026/08/when-it-snows-it-pours-anatomy-of-a-servicenow-red-team/). ServiceNow started as an IT Service Management (ITSM) product, deeply integrated into operational and incident management workflows, but it has expanded to cover many more use cases (there are [dozens of products listed here](https://www.servicenow.com/products-by-category.html)). Now, with AI driving more business use cases, [ServiceNow's website says](https://www.servicenow.com/what-is-servicenow.html) they are striving to build "a single platform that brings together any AI, any data, and any workflow". This sounds like a TSI that we need to secure! But how would we convert this detailed report into a TRR detection artifact?
 
@@ -77,6 +77,7 @@ In the spirit of "good enough" analysis, the table below is a first-pass Service
 | Credential Access                 | Obtain MID service-account credentials from `config.xml`         | [T1552.001 — Credentials in Files](https://attack.mitre.org/techniques/T1552/001/)                                                                                    | Existing ATT&CK           | No                                  | [[ServiceNow TRR Evidence Notes#Obtain MID service-account credentials from config.xml\|notes]]    |
 | Credential Access                 | Retrieve encrypted credentials through a MID server              | [T1555 — Credentials from Password Stores](https://attack.mitre.org/techniques/T1555/)                                                                                | Existing ATT&CK           | Yes                                 | [[ServiceNow TRR Evidence Notes#Retrieve encrypted credentials through a MID server\|notes]]       |
 | Command and Control               | Retrieve and execute remotely hosted code                        | [T1105 — Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105/)<br>Secondary: [T1071.001 — Web Protocols](https://attack.mitre.org/techniques/T1071/001/) | Existing ATT&CK           | Likely                              | [[ServiceNow TRR Evidence Notes#Retrieve and execute remotely hosted code\|notes]]                 |
+
 With these technique classifications, we lose some detail about the actual finding, but zooming out like this lets us better identify related procedures/attacker actions, including those that could be common to a product class (hence the presence of the "Common to DPMs?" column where I theorize which of these techniques could apply to similar products). This can shape future attacker or defender research, accelerating the TRR process. But let's return to our original mission of writing TRRs based on this specific report. 
 ## High-value techniques
 
@@ -99,7 +100,7 @@ After the TRR is written, it becomes immediately useful for those groups of peop
 - Incident responders/threat hunters have a much better sense of where to investigate or hunt for suspicious activity
 - Detection engineers know what [[Turning the TIDE with Test-Initiated Detection Engineering|validation tests]] and detection rules they need to build to secure the platform
 
-Here's where we can see the benefit of TRRs - instead of this research occurring in parallel within dozens of security organizations, every team and org in the world can benefit from the settled truth of the TRR and start to collectively document a **different** part of the security paradigm. Hopefully this post gave you a better sense of the differences between TRRs and red team finding reports and an idea of how to leverage the latter to generate the former - please let me know if you're interested in trying out TRR writing for yourself!
+Here's where we can see the benefit of TRRs - instead of this research occurring in parallel within dozens of security organizations, every team and org in the world can benefit from the settled truth of the TRR and start to collectively document a **different** part of the security paradigm. Hopefully this post gave you a better sense of the differences between TRRs and red team finding reports and an idea of how to leverage the latter to generate the former - please let me know if you're interested in trying out TRR writing for yourself! You can find a collection of related resources in this [[Technique Research Report (TRR)|TRR page]].
 
 [^1]: To make things more fun, technically ServiceNow can be exploited to run commands on premise, though that likely would fall under a different technique. This works through a MID server concept to support on-prem integrations: [mid-server-basics.pdf](https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/success/quick-answer/mid-server-basics.pdf)
 
