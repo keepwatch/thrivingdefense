@@ -68,3 +68,42 @@ Dangerous capabilities:
 Example software:
 - CyberArk
 - Teleport
+
+### Digital Process Management
+
+Dangerous capabilities:
+- Automation (execution) across any integrated products
+- Granting access to powerful or sensitive credentials
+- Lateral movement / bridging segregated networks
+
+Example software:
+- ServiceNow
+
+## Knowledge, Chat, Logging, and Ticketing Systems
+
+Dangerous capabilities:
+- Provides centralized access to large amounts of data, including potentially sensitive types including:
+	- Red team reports
+	- Incident tickets (and post-mortem reports)
+	- Credentials shared for troubleshooting in a chat or ticket
+	- Credentials found on logged command lines
+	- Passwords typed into the username field
+
+Example software:
+- Knowledge
+	- Atlassian Confluence
+	- MediaWiki
+	- Github Pages
+	- ServiceNow (depending on configuration)
+	- Many products have these features integrated (even if they lack the full capabilities)
+- Chat
+	- Slack
+- Logging
+	- Splunk
+	- Palo Alto XSIEM
+	- Falcon NG-SIEM
+	- Falcon LogScale
+- Ticketing
+	- Jira
+	- ServiceNow (depending on configuration)
+
