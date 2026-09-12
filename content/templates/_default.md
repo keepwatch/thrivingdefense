@@ -3,7 +3,7 @@ tags: [author/Jordan_Anderson, type/stub]
 title: {{Title}}
 aliases:
 
-created: {{date}},
+created: {{date}}
 
 draft: true
 

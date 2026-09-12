@@ -7,7 +7,7 @@ aliases:
 created: 2026-08-30
 description: Turn detailed ServiceNow attack research into practical procedures, telemetry models, and validation tests
 draft: false
-promoted: false
+promoted: true
 ---
 I believe the in-depth research documented in [[Technique Research Report (TRR)|Technique Research Report (TRR)s]] is the path forward for detection, and I worry about how unprepared we are to detect compromises of [[Trusted Service Infrastructure (TSI)]] products. As our enterprises grow increasingly complex and interconnected, more and more management work is executed through TSI products like application deployers, CI/CD, password vaults, and workflow automation tools. These products (when SaaS-hosted) can provide initial-access vectors through compromise or exploitation, but are also trivially accessed using stolen user cookies. With that concern in mind, what would be required to write TRRs on TSI products?
 

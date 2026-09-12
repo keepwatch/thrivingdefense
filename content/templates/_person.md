@@ -3,6 +3,6 @@ tags: type/person
 title: {{title}}
 aliases:
 
-created: {{date}},
+created: {{date}}
 comments: false
 ---
