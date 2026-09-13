@@ -35,7 +35,7 @@ At this point, several issues come to the surface:
 
 The solution is to accept that [[some techniques should only be detected opportunistically]]; execution-associated techniques like this one are usually included in that category. Instead of looking for all the ways attackers can achieve execution, we need to look for the _changes_ the attacker is able to achieve by executing arbitrary code. This is where the other tactics—like persistence, privilege escalation, discovery, and lateral movement—come in.
 
-To be clear, if we **can** build detections for execution, they are useful, but they should be treated as opportunistic rather than complete or comprehensive. Defenders should deploy execution detections where possible, since the techniques and detections are constantly evolving in a cat-and-mouse game with vendors like ServiceNow. To get ahead, defenders must prioritize their efforts around "chokepoint" techniques.
+To be clear, if we **can** build detections for execution, they are useful, but they should be treated as opportunistic rather than complete or comprehensive. Defenders should deploy execution detections where possible, since the techniques and detections are constantly evolving in a cat-and-mouse game with vendors like ServiceNow. To get ahead, defenders must prioritize their efforts around [[Selecting Advantageous Terrain|"chokepoint" techniques]].
 
 ## What techniques should we focus on?
 
