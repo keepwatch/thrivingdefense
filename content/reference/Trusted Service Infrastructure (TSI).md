@@ -79,6 +79,11 @@ Dangerous capabilities:
 Example software:
 - ServiceNow
 
+## Related content
+
+- [[Writing TRRs for TSI]] — a worked example of how to apply [[Technique Research Report (TRR)|TRR]] research methodology to a DPM product (ServiceNow)
+- [[Selecting Advantageous Terrain]] — TSI products represent high-value "chokepoint" terrain worth defending comprehensively
+
 ## Knowledge, Chat, Logging, and Ticketing Systems
 
 Dangerous capabilities:
