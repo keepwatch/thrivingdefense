@@ -2,6 +2,7 @@
 tags:
   - author/Jordan_Anderson
   - type/article
+  - theme/coverage
 title: Detection coverage is a shared responsibility
 description: Focus detection work on necessary attacker paths by combining intelligence, modeling, and research
 aliases:
