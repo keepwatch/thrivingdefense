@@ -52,7 +52,11 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   right: [
     Component.ConditionalRender({
-      component: Component.RecentNotes({ limit: 5, showTags: false }),
+      component: Component.RecentNotes({
+        limit: 5,
+        showTags: false,
+        filter: (page) => page.frontmatter?.tags?.includes("type/article") ?? false,
+      }),
       condition: (page) => page.fileData.slug === "index",
     }),
     Component.Graph(),
