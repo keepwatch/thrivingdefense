@@ -56,7 +56,7 @@ There's a general sentiment of impending doom that as attackers adopt AI, defend
 
 As [@HackingLZ said on Twitter](https://x.com/HackingLZ/status/2098029345054785813), "LLMs don’t magically make the underlying techniques new." We **must** know attacker objectives, the battlespace we must defend, and the means our opponents must use to achieve those objectives. Whether they can achieve those objectives quickly or not is a secondary concern. 
 
-So get out there and start mapping how your systems connect (the BloodHound work) and conducting deep research to contribute TRRs to our world-readable database (read the [[Technique Research Report (TRR)|TRR]] page for more details on how). We all benefit when we do this work in common!
+So get out there and start mapping how your systems connect (the BloodHound work) and [[Writing TRRs for TSI|conducting deep research to contribute TRRs]] to our world-readable database (read the [[Technique Research Report (TRR)|TRR]] page for more details on how). We all benefit when we do this work in common!
 
 [^1]: Note: MITRE ATT&CK® heatmaps != metric!
 
