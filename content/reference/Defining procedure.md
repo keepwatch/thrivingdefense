@@ -43,7 +43,7 @@ They then extract procedures from threat intelligence writeups and group them to
 
 ## On Detection definition
 
-[[people/Jared Atkinson|Jared Atkinson]] wrote a [series of articles](https://specterops.io/blog/2023/11/14/part-11-functional-composition/) describing a comprehensive taxonomy for understanding attacker activity (beyond what MITRE defined with Tactics and Techniques). I highly recommend the entire series, but this is the key quote from [part 6](https://specterops.io/blog/2022/09/08/part-6-what-is-a-procedure/):
+[[people/Jared Atkinson|Jared Atkinson]] wrote the [[On Detection]] series of articles to describe a comprehensive taxonomy for understanding attacker activity (beyond what MITRE defined with Tactics and Techniques). I highly recommend the entire series, but this is the key quote from [part 6](https://specterops.io/blog/2022/09/08/part-6-what-is-a-procedure/):
 
 > ... one of the significant issues in the sub-discipline of Detection and Response is that our map is too low resolution to use to make sound and accurate predictions ... we apprehend the cyber world as something composed of three layers \[but there are\] at least six layers (*functions*, *operations*, *procedures*, *sub-techniques*, *techniques*, and *tactics*)
 
@@ -53,7 +53,7 @@ Jared's definition of a procedure (also from [part 6](https://specterops.io/blog
 This is necessary because, as Jared points out in [part 1](https://specterops.io/blog/2022/07/19/part-1-discovering-api-function-usage-through-source-code-review/):
 > a three-tiered taxonomy (such as TTP) is far too limiting ... which leads to grouping different things ... at the bottom of the taxonomy. For this reason, it seems to me that the term “Procedures” is used too broadly ...
 
-Jared goes on to further define operations and functions and I HIGHLY recommend working through the entire series[^6]. It's dense stuff, but unlike these brief snippets I've shared so far, it does far more to create a more robust model for detection than the other procedure definitions.  
+Jared goes on to further define operations and functions and I HIGHLY recommend working through the entire series. It's dense stuff, but unlike these brief snippets I've shared so far, it attempts to create a more robust model for detection than any other procedure definition I've seen.  
 ## Procedure vs Instance
 
 When I first read Jared's On Detection series, I couldn't figure out how to make it practical. Thankfully, the world has [[people/Andrew VanVleet|Andrew VanVleet]], who attended the aforementioned training and designed the [[Technique Research Report (TRR)]] format to generically apply On Detection to any technique. Furthermore, he wrote a blog post ([TTPI’s: Extending the Classic Model](https://medium.com/@vanvleet/ttpis-extending-the-classic-model-058c572b76f3)) that suggests we rename what MITRE and Tidal call *procedures* as *instances* (or perhaps *observables*). As Andrew notes, the term *instance* makes it more obvious that they are theoretically infinite, which should change the way we seek to detect them. 
@@ -81,5 +81,3 @@ As Andrew says, both types of procedure (procedure-instance and procedure-layer)
 [^4]: "Structured Threat Information Expression (STIX) is a language and serialization format used to exchange cyber threat intelligence (CTI). STIX enables organizations to share CTI with one another in a consistent and machine readable manner, allowing security communities to better understand what computer-based attacks they are most likely to see and to anticipate and/or respond to those attacks faster and more effectively." (From [the official documentation](https://oasis-open.github.io/cti-documentation/))
 
 [^5]: An example procedure from the [STIX object blog post](https://www.dogesec.com/blog/ttps_are_missing_the_p/) is `Shadow copy deletion via vssadmin before ransomware deployment on backup infrastructure`, which removes the actor (probably good) but is still too vaguely defined, remains prose-structured, and can't be made [[Mutually Exclusive and Collectively Exhaustive (MECE)]] (MECE requires a tighter-scoped definition). 
-
-[^6]: If you'd like a gentler introduction that spending a week reading the 15-post series, you could start with Part 6, 7, and 8 (Parts 1-5 are the background work for those posts). Alternatively, [SpecterOps offers a training on this content](https://specterops.io/training/tradecraft-analysis/), though I haven't taken it so can't personally vouch for it.
