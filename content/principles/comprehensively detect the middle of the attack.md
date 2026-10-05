@@ -22,4 +22,7 @@ Attackers collect background data, gain initial access, establish a persistent f
 
 > Since we can yield early stages of the attack, and since we must detect before impact, that means we should focus on the techniques in the middle of the attack.
 
+This is further enhanced by the thought in [[Detection coverage is a shared responsibility]] - we should narrow our focus to techniques on attack paths as-of-yet undefended in our organization.
+
+
 [^1]: Unless the detection drives automatic prevention/response, which it usually doesn't in a SOC (maybe in a vendor product!)

@@ -14,4 +14,4 @@ Building off [[some techniques should only be detected opportunistically]] and t
 
 The inverse of this statement is also true:
 
-> Detections for non-yielded techniques must comprehensively cover all possible [[MITRE ATT&CK Procedures and Instances|procedures]]
+> Detections for non-yielded techniques must comprehensively cover all possible [[Defining procedure|procedures]]

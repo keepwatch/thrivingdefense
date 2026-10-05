@@ -54,7 +54,7 @@ Interestingly, ATT&CK has a platform for "ESXi", but I was not able to find any 
 
 ### Notable defense evasion techniques
 
-ATT&CK is planning to rework the defense-evasion category, which is probably good, because several of these techniques are likely being used for [[MITRE ATT&CK Procedures and Instances|instance-level]] rules. 
+ATT&CK has recently reworked the defense-evasion category, which is probably good, because several of these techniques are likely being used for [[Defining procedure#Procedure vs Instance|instance-level]] rules. 
 
 | Technique | Platform | Name                            | Total | ART | Sigma | Splunk |  ES | Tactic(s)                                          |
 | --------- | -------- | ------------------------------- | ----: | --: | ----: | -----: | --: | -------------------------------------------------- |
