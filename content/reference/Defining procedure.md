@@ -1,7 +1,7 @@
 ---
 tags:
   - author/Jordan_Anderson
-  - type/definition
+  - type/article
 title: Defining procedure
 description: Why ATT&CK 'instances' and On Detection 'procedures' are different — and why that distinction matters.
 aliases:

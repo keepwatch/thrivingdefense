@@ -18,8 +18,11 @@ export const sharedPageComponents: SharedLayout = {
     }),
   ],
   footer: Component.Footer({
+    disclaimer:
+      "All opinions expressed here are the author’s own and do not represent the views of their employer.",
     links: {
       GitHub: "https://github.com/keepwatch/thrivingdefense",
+      RSS: "https://thrivingdefense.com/articles.xml",
     },
   }),
 }

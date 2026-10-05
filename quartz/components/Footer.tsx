@@ -5,6 +5,7 @@ import { i18n } from "../i18n"
 
 interface Options {
   links: Record<string, string>
+  disclaimer?: string
 }
 
 export default ((opts?: Options) => {
@@ -13,6 +14,7 @@ export default ((opts?: Options) => {
     const links = opts?.links ?? []
     return (
       <footer class={`${displayClass ?? ""}`}>
+        {opts?.disclaimer && <p>{opts.disclaimer}</p>}
         <p>
           {i18n(cfg.locale).components.footer.createdWith}{" "}
           <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> © {year}
