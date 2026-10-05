@@ -1,4 +1,0 @@
-interface:
-  display_name: "Post Review"
-  short_description: "Pre-publication review for Thriving Defense"
-  default_prompt: "Use $post-review-skill to review this Thriving Defense post before publication."
