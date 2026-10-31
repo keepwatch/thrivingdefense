@@ -9,9 +9,9 @@ aliases:
   - ATTACK Procedures Defined
 created: 2026-03-07
 ---
-If you've been around cybersecurity for a while, you've probably heard of the *procedure*, perhaps in the context of Tactics, Techniques, and Procedures (TTPs), or as part of the term *Standard Operating Procedure* (SOP), a consistent method for executing a workflow. In 2013, the term featured prominently in David J. Bianco's [[Pyramid of Pain]] (urging defenders to detect behavior (TTPs) rather than just indicators). That same year, MITRE classified attacker behavior into Tactics and Techniques in version 1 of their ATT&CK® framework. Many techniques were accompanied by a few example procedures. 
+If you've been around cybersecurity for a while, you've probably heard of the *procedure*, perhaps in the context of Tactics, Techniques, and Procedures (TTPs), or as part of the term *Standard Operating Procedure* (SOP), which is a consistent method for executing a workflow. In 2013, the term featured prominently in David J. Bianco's [[Pyramid of Pain]] (urging defenders to detect behavior in the form of TTPs). That same year, MITRE released the first version of their ATT&CK® framework, classifying attacker behavior into Tactics and Techniques (as well as a few example Procedures). 
 
-The problem with the term *procedure* is that the term is *overloaded* - it means different things depending on the context (and it lacks a consistent definition). Is it a standard, consistent checklist? Is it an example of an attack that has occurred in real life? Or is it something completely different? This page walks through the different definitions relevant to detection engineering and proposes a path forward.
+The problem with *procedure* is that the term is *overloaded* - it means different things depending on the context (and it lacks a consistent definition). Is it a standard, consistent checklist? Is it an example of an attack that has occurred in real life? Or is it something completely different? This page walks through the different definitions relevant to detection engineering and proposes a path forward.
 
 ## SOP definition
 
