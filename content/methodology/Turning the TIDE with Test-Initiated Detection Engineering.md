@@ -10,7 +10,7 @@ created: 2026-03-27
 draft: false
 promoted: true
 ---
-Detection engineers are really good at writing rules. That's one of the core skills, enabling us to find the right combination of query logic that can [[identify impossible travel]] by [incorporating the Haversine formula into a 40-row Splunk query](https://community.splunk.com/t5/Reporting/Find-the-Distance-Between-Two-or-More-Geolocation-Coordinates/td-p/57653), or spitting out 6 rules in 4 hours after reading the threat intel report *du jour*. But most detection teams are drowning in operations work. Each rule in the library generates false positives that must be tuned, data sources regularly change (requiring migration or maintenance), and environmental shifts can unexpectedly break rules. The more rules we write, the worse the maintenance problem.
+Detection engineers are really good at writing rules. That's one of the core skills, enabling us to find the right combination of query logic that can [[identify impossible travel]] by [incorporating the Haversine formula into a 40-row Splunk query](https://community.splunk.com/t5/Reporting/Find-the-Distance-Between-Two-or-More-Geolocation-Coordinates/td-p/57653), or spitting out 6 rules in 4 hours after reading the [[detections based on threat intelligence are always opportunistic|threat intel report *du jour*]]. But most detection teams are drowning in operations work. Each rule in the library generates false positives that must be tuned, data sources regularly change (requiring migration or maintenance), and environmental shifts can unexpectedly break rules. The more rules we write, the worse the maintenance problem.
 
 It's time to rethink our detection engineering process. We've been operating in [[content/index#Why thriving?|survival mode]] for far too long, doing our best to add all the rules as fast as we can. Adding rules is a necessary task to improve coverage, but there's a simple tweak we can apply to make detection writing far more sustainable: 
 
@@ -94,7 +94,7 @@ The flow diagram above is based on threat-intel-driven detection writing (which 
 
 Another approach is to [[implement tests based on TRRs]]. Since [[Technique Research Report (TRR)|TRRs]] break techniques into isolated [[Defining procedure#Procedure vs Instance|procedures]], tests linked to these reports can provide comprehensive coverage for a given technique. This is a great goal, but we need many more TRRs before this is a sufficient option on its own.
 
-[[Create tests at scale with GenAI|Creating tests at scale with GenAI]] may be possible in time, changing how we can approach instance- and procedure-based tests. More research is needed here.
+Creating tests at scale with GenAI may be possible in time, changing how we can approach instance- and procedure-based tests. More research is needed here.
 
 ## Other notes
 
