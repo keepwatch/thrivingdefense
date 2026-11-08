@@ -20,7 +20,7 @@ See also [this blog post](https://medium.com/@vanvleet/technique-research-report
 
 ## Overall TRR process
 
-The TRR process starts with theorizing about the methods/procedures that could be used to execute this technique on a given product[^3]. This should be inspired by TRRs for similar techniques as well as research about what has already been written on the internet. The next phase is to test it to see if the procedures that were described are actually possible - do they work in the real world? Once determining what procedures work, build a graph (the Detection Data Model, or DDM ) which shows the OS and application path that is taken when a given procedure is exercised[^1]. This discovery could collapse multiple theorized procedures to a single procedure, perhaps because a different theoretical procedure actually uses the same fundamental up Windows API. The DDM also shows path and potential telemetry that aids the detection engineer with building detections. 
+The TRR process starts with theorizing about the methods/procedures that could be used to execute this technique on a given product[^3]. See [[Writing TRRs for TSI]] for a worked example applying this process to a real-world SaaS product. This should be inspired by TRRs for similar techniques as well as research about what has already been written on the internet. The next phase is to test it to see if the procedures that were described are actually possible - do they work in the real world? Once determining what procedures work, build a graph (the Detection Data Model, or DDM ) which shows the OS and application path that is taken when a given procedure is exercised[^1]. This discovery could collapse multiple theorized procedures to a single procedure, perhaps because a different theoretical procedure actually uses the same fundamental up Windows API. The DDM also shows path and potential telemetry that aids the detection engineer with building detections. 
 
 Once the TRR exists and the procedures are formalized, we next find or write a formal emulation test for each procedure, afterwards executing it in each distinct environment where that procedure would be relevant. This will reveal existing defensive coverage (whether it be a detection or prevention). Any gaps that are not covered after the testing should be remediated with preventative or detective controls. Starting with validation is in the spirit of [[Turning the TIDE with Test-Initiated Detection Engineering|TIDE]], offering current and repeated future validation of the coverage. 
 
@@ -54,6 +54,6 @@ Here's the advantages of applying for a job on the merits of your TRRs:
 
 [^3]: See [[MITRE ATT&CK® is not flat]] to learn why we're looking for technique x product pair coverage
 
-[^4]: We don't have a standard way to do this yet, but [[Andrew VanVleet]] is working on something!
+[^4]: We don't have a standard way to do this yet, but [[people/Andrew VanVleet|Andrew VanVleet]] is working on something!
 
 [^5]: I sense an objection coming - "how useful is this when AI slop generates all the code and possibly even TRRs?" See the next point.
