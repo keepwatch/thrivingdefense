@@ -10,7 +10,7 @@ created: 2026-03-07, 09:21
 ---
 > A TRR documents the distinct procedures that implement a technique, including the background and technical information necessary to understand how those procedures work. **TRRs provide the context, information, and potential telemetry needed to create a robust detection strategy tailored to your specific environment.**
 
-TRRs were created by [[people/Andrew VanVleet|Andrew VanVleet]] to define a structured format for comprehensive (instead of opportunistic) detection research. Building on the principles of [Capability Abstraction](https://specterops.io/blog/2020/02/06/capability-abstraction/) defined by [[people/Jared Atkinson|Jared Atkinson]], and the subsequent schematization of [[Defining procedure#Procedure vs Instance|procedures]], TRRs seek to define all procedures within a given technique. This comprehensive knowledge gives defenders the ability to write detection validation tests and/or detection rules using the research.
+TRRs were created by [[people/Andrew VanVleet|Andrew VanVleet]] to define a structured format for comprehensive (instead of [[detections based on threat intelligence are always opportunistic|opportunistic]]) detection research. Building on the principles of [Capability Abstraction](https://specterops.io/blog/2020/02/06/capability-abstraction/) defined by [[people/Jared Atkinson|Jared Atkinson]], and the subsequent schematization of [[Defining procedure#Procedure vs Instance|procedures]], TRRs seek to define all procedures within a given technique. This comprehensive knowledge gives defenders the ability to write detection validation tests and/or detection rules using the research.
 
 Another reason for creating the TRRs is to ensure the detection *context* is recorded, not just the rule. The appropriate context helps detection engineers manage and tune the rule as environmental circumstances change.
 
@@ -28,7 +28,7 @@ In other words, that process is:
 1. Theorize about how to execute a technique on a product. Not just the easiest way, but all of the ways.
 2. Test if those methods (aka procedures) are actually possible
 3. Draw out each procedure that worked in testing into a DDM and deduplicate (removing the ones that take the same underlying path but have slight execution variances)
-4. Find or build a test for each remaining procedure
+4. [[implement tests based on TRRs|Find or build a test for each remaining procedure]]
 5. Execute the test in every relevant area[^2]
 6. Record the outcome of the test - *prevented*, *detected*, *logged*, or *none of the above*
 7. If possible, strengthen the controls (upgrade detections to preventions, etc.)
